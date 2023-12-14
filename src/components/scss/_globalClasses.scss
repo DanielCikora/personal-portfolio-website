@@ -1,0 +1,22 @@
+.main-link {
+  color: $white;
+  text-decoration: none;
+  font-size: 20px;
+  letter-spacing: 4px; // test out sizes
+  position: relative;
+  &:hover {
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 0;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-left: 14px solid $white;
+      left: -20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}

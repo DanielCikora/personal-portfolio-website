@@ -1,0 +1,14 @@
+.hero {
+    display: flex;
+    position: relative;
+}
+.hero-left {
+    background-color: $grey;
+    height: 100dvh;
+    width: 55%;
+}
+.hero-right {
+    background-color: $black;
+    height: 100dvh;
+    width: 45%;
+}

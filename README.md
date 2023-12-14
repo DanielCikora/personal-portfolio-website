@@ -1,0 +1,1 @@
+My name is Daniel Cikora, and this is my personal portfolo website that I've created using ReactJS, and ReactRouter.

@@ -1,0 +1,26 @@
+.navigation-top {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 80px;
+  display: flex;
+}
+.navigation-top__wrapper {
+  align-self: center;
+  display: flex;
+  width: 100%;
+}
+.navigation-top__ul {
+  display: flex;
+  list-style-type: none;
+  column-gap: 50px;
+  align-items: center;
+}
+// Logo
+.navigation-top__logo {
+  font-size: 48px;
+  font-weight: bold;
+  color: #000; /* Set the text color */
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
