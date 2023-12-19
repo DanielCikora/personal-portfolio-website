@@ -18,9 +18,10 @@
 }
 // Logo
 .navigation-top__logo {
-  font-size: 48px;
-  font-weight: bold;
-  color: #000; /* Set the text color */
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-    1px 1px 0 #000;
+  font-size: 30px;
+  font-weight: 700;
+  color: $grey;
+  text-decoration: none;
+  text-shadow: -1px -1px 0 $white, 1px -1px 0 $white, -1px 1px 0 $white, 1px 1px 0 $white;
+  margin-right: 40px;
 }
