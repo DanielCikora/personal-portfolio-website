@@ -1,14 +1,14 @@
 .hero {
-    display: flex;
-    position: relative;
+  display: flex;
+  position: relative;
 }
 .hero-left {
-    background-color: $grey;
-    height: 100dvh;
-    width: 55%;
+  background-color: $grey;
+  width: 60%;
+  height: 1080px;
 }
 .hero-right {
-    background-color: $black;
-    height: 100dvh;
-    width: 45%;
+  background-color: $black;
+  width: 40%;
+  height: 1080px;
 }

@@ -310,8 +310,8 @@ template {
 .main-link {
   color: #FFFFFF;
   text-decoration: none;
-  font-size: 20px;
-  letter-spacing: 4px;
+  font-size: 14px;
+  letter-spacing: 2px;
   position: relative;
 }
 .main-link:hover {
@@ -322,9 +322,9 @@ template {
   content: "";
   width: 0;
   height: 0;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 14px solid #FFFFFF;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 12px solid #FFFFFF;
   left: -20px;
   top: 50%;
   transform: translateY(-50%);
@@ -347,13 +347,29 @@ body {
   padding: 0 20px;
   margin: 0 auto;
 }
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    padding: 0 25px;
+  }
+}
+
+.logo-image {
+  display: block;
+}
 
 .navigation-top {
   position: absolute;
-  z-index: 1;
+  top: 0;
+  z-index: 9999;
   width: 100%;
   height: 80px;
   display: flex;
+  background-color: #111f28;
+  overflow: hidden;
+}
+
+.navigation-top--fixed {
+  position: fixed;
 }
 
 .navigation-top__wrapper {
@@ -365,17 +381,18 @@ body {
 .navigation-top__ul {
   display: flex;
   list-style-type: none;
-  column-gap: 50px;
+  column-gap: 40px;
   align-items: center;
+  margin-left: auto;
 }
 
 .navigation-top__logo {
   font-size: 30px;
   font-weight: 700;
-  color: #888888;
+  color: #484e52;
   text-decoration: none;
   text-shadow: -1px -1px 0 #FFFFFF, 1px -1px 0 #FFFFFF, -1px 1px 0 #FFFFFF, 1px 1px 0 #FFFFFF;
-  margin-right: 40px;
+  margin-right: 80px;
 }
 
 .hero {
@@ -384,15 +401,15 @@ body {
 }
 
 .hero-left {
-  background-color: #888888;
-  height: 100dvh;
-  width: 55%;
+  background-color: #484e52;
+  width: 60%;
+  height: 1080px;
 }
 
 .hero-right {
-  background-color: #000000;
-  height: 100dvh;
-  width: 45%;
+  background-color: #060607;
+  width: 40%;
+  height: 1080px;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,8 +1,10 @@
-@import '../scss/normalize';
-@import '../scss/mqueries';
-@import '../scss/variables';
-@import '../scss/globalClasses';
-@import '../scss/layout';
-//
-@import '../navigation/navigationTop';
-@import '../hero/hero';
+@import "../scss/normalize";
+@import "../scss/mqueries";
+@import "../scss/variables";
+@import "../scss/globalClasses";
+@import "../scss/layout";
+// Micro Components
+@import "../micro-components/logo";
+// Components
+@import "../navigation/navigationTop";
+@import "../hero/hero";

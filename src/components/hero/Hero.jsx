@@ -1,4 +1,5 @@
-import '../scss/styles.scss'
+import "../scss/styles.scss";
+import HeroImage from "../../assets/images/pexels-tirachard-kumtanom-450055.jpg";
 export default function Hero() {
   return (
     <section className='hero'>
