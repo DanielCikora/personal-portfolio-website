@@ -1,0 +1,19 @@
+.projects {
+  position: relative;
+}
+.projects-image {
+  height: auto;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  position: absolute;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.wrapper--projects {
+  background-color: $white;
+  height: 100%;
+  max-width: 1200px;
+}

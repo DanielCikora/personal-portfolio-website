@@ -1,14 +1,25 @@
-.hero {
-  display: flex;
+.hero-image__wrapper {
   position: relative;
 }
-.hero-left {
-  background-color: $grey;
-  width: 60%;
-  height: 1080px;
+.hero-image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: auto;
 }
-.hero-right {
-  background-color: $black;
-  width: 40%;
-  height: 1080px;
+// Hero Text
+.hero-text {
+  position: absolute;
+  top: 100px;
+  max-width: 700px;
+}
+.hero-text__h1 {
+  font-size: 60px;
+  color: $white;
+}
+.hero-text__h2 {
+  color: $white;
+  font-size: 24px;
+  line-height: 26px;
 }

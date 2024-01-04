@@ -6,7 +6,6 @@
   height: 80px;
   display: flex;
   background-color: $navy;
-  overflow: hidden;
 }
 .navigation-top--fixed {
   position: fixed;
@@ -53,8 +52,8 @@
 .hamburger-line--2 {
   opacity: 1;
 }
-// Open
-.hamburger--open {
+// Hamburger Button Opened
+.hamburger--opened {
   .hamburger-line--1 {
     transform: translate(0, 10px) rotate(-45deg);
   }
@@ -65,7 +64,24 @@
     transform: translate(0, -10px) rotate(45deg);
   }
 }
-
+// Navigation Menu Opened
+.navigation-top--opened {
+  .navigation-top__ul {
+    padding-top: 100px;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    position: absolute;
+    width: 100%;
+    background-color: $navy;
+    top: 80px;
+    left: 0;
+    .navigation-top__link {
+      font-size: 20px;
+    }
+  }
+}
 // Responsive
 @include Laptop {
   .navigation-top__ul {
@@ -83,8 +99,14 @@
     display: block;
   }
 }
-.hamburger--open {
-  .navigation-top__ul {
-    display: block;
+@include MobileL {
+  .navigation-top {
+    height: 60px;
+  }
+  .navigation-top--opened .navigation-top__ul {
+    top: 60px;
+    .navigation-top__link {
+      font-size: 16px;
+    }
   }
 }

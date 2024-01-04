@@ -5,3 +5,8 @@
 .logo-image {
   display: block;
 }
+@include MobileL {
+  .logo-image {
+    height: 24px;
+  }
+}
