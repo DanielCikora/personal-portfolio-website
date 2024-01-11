@@ -28,8 +28,7 @@ export default function NavigationTop() {
     { id: 1, title: "PROJECTS", url: "/Projects" },
     { id: 2, title: "SERVICES", url: "/Services" },
     { id: 3, title: "CONTACT", url: "/Contact" },
-    { id: 4, title: "RESUME", url: "/Resume" },
-    { id: 5, title: "ABOUT", url: "/About" },
+    { id: 4, title: "ABOUT", url: "/About" },
   ];
   return (
     <header>

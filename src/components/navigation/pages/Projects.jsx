@@ -1,11 +1,21 @@
+import { useState } from "react";
 import ProjectsImage from "../../../assets/images/projects.jpg";
 import TrafalgarImage from "../../../assets/images/trafalgar-pixel-perfect-cut.png";
 export default function Projects() {
+  const [isZoomedIn, setIsZoomedIn] = useState(false);
+  const openGallery = () => {
+    setIsZoomedIn(!isZoomedIn);
+  };
   return (
     <section className='projects'>
-      <img className='projects-image' src={ProjectsImage} alt='projects' />
+      <div className='projects-image__wrapper'>
+        <img className='projects-image' src={ProjectsImage} alt='projects' />
+      </div>
       <div className='wrapper wrapper--projects'>
-        <div className='projects-box'>
+        <div
+          className={`projects-box${isZoomedIn ? " projects-box--opened" : ""}`}
+          onClick={openGallery}
+        >
           <img
             className='projects-box__image'
             src={TrafalgarImage}
@@ -24,6 +34,7 @@ export default function Projects() {
             className='main-link projects-box__a'
             href='https://github.com/DanielCikora/Trafalgar-ReactJS-App.git'
             target='_blank'
+            rel='noreferrer'
           >
             Link to the Project.
           </a>
