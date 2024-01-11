@@ -12,9 +12,12 @@ export default function Hero() {
       <div className='wrapper wrapper--hero'>
         <div className='hero-text'>
           <h1 className='hero-text__h1'>I AM DANIEL</h1>
-          <h2 className='hero-text__h2'>
-            Frontend Developer.
-          </h2>
+          <h2 className='hero-text__h2'>Frontend Developer</h2>
+          <p className='hero-text__p'>
+            Crafting visually
+            appealing and user-friendly websites. Transforming ideas into
+            seamless and responsive digital experiences is my expertise.
+          </p>
           <a
             href={CVFile}
             className='hero-text__download-btn'
