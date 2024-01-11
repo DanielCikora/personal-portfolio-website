@@ -497,12 +497,14 @@ body {
   width: 100%;
   height: 100dvh;
   overflow: hidden;
+  position: relative;
 }
 
 .hero-video {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: brightness(0.8);
 }
 
 .hero-text {
@@ -513,15 +515,21 @@ body {
 
 .hero-text__h1 {
   font-size: 60px;
-  color: #060607;
   margin-bottom: 60px;
 }
 
 .hero-text__h2 {
-  color: #060607;
   font-size: 26px;
+  font-weight: 500;
   line-height: 26px;
+  margin-bottom: 30px;
+}
+
+.hero-text__p {
+  font-size: 22px;
+  line-height: 24px;
   margin-bottom: 40px;
+  max-width: 500px;
 }
 
 .hero-text__download-btn {
@@ -555,6 +563,9 @@ body {
   .hero-text__download-btn {
     font-size: 16px;
   }
+  .hero-video {
+    filter: brightness(0.6);
+  }
 }
 @media only screen and (max-width: 425px) {
   .hero-text {
@@ -565,14 +576,18 @@ body {
     left: 0;
   }
   .hero-text__h1 {
-    font-size: 36px;
+    font-size: 40px;
   }
   .hero-text__h2 {
+    font-size: 22px;
+  }
+  .hero-text__p {
+    max-width: 100%;
     font-size: 18px;
-    padding: 0 60px;
+    padding: 0 30px;
   }
   .hero-text__download-btn {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 .projects {
@@ -597,41 +612,68 @@ body {
 
 .wrapper--projects {
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .projects-box {
-  background-color: #111f28;
-  height: 440px;
-  padding: 20px 20px 0 20px;
+  background-color: #3D5A73;
+  height: 420px;
+  max-width: 300px;
+  padding: 16px 16px 0 16px;
   display: flex;
   flex-direction: column;
   border-radius: 8px;
   outline: 1px solid #FFFFFF;
+  text-align: center;
+  top: 100px;
+  overflow: hidden;
   cursor: pointer;
+}
+.projects-box *::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  background-color: #28403D;
+  top: 0;
+  left: 0;
 }
 
 .projects-box__image {
   width: 100%;
-  max-width: 400px;
+  max-width: 300px;
   height: auto;
+  margin: 0 auto;
+  z-index: 1;
+  border-radius: 8px;
+  outline: 1px solid #060607;
 }
 
 .projects-text {
-  text-align: center;
-  padding: 20px;
+  padding: 20px 10px 0 10px;
 }
 
 .projects-text__h2 {
-  font-size: 24px;
+  font-size: 20px;
   margin-bottom: 20px;
 }
 
 .projects-text__p {
   font-size: 18px;
+  padding: 0 10px;
+  margin-bottom: 50px;
 }
 
 .projects-box__a {
   font-size: 20px;
+}
+.projects-box__a::before {
+  display: none;
+}
+.projects-box__a:hover {
+  text-decoration: 2px solid #FFFFFF underline;
+  border-radius: 8px;
 }
 
 /*# sourceMappingURL=styles.css.map */
