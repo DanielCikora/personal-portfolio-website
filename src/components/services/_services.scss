@@ -1,0 +1,31 @@
+// Services Text
+.services {
+  padding: 200px 0;
+  background-color: $green;
+}
+.services-text {
+  display: flex;
+  // column-gap: 120px;
+  justify-content: space-around;
+}
+.services-text__h2 {
+  font-size: 46px;
+  color: $white;
+}
+.services-text__ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+.services-text__li {
+  font-size: 30px;
+  color: $white;
+}
+// Media Query
+@include Tablet {
+  .services-text {
+    flex-direction: column;
+    text-align: center;
+  }
+}

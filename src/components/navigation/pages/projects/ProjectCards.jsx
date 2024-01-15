@@ -16,6 +16,16 @@ export default function ProjectCards() {
       cardGitHubLink:
         "https://github.com/DanielCikora/Trafalgar-ReactJS-App.git",
     },
+    {
+      id: 2,
+      cardImgSrc: TrafalgarImage,
+      cardAlt: "project-trafalgar",
+      cardTitle: "Trafalgar Medical Company",
+      cardDescription:
+        "Website for Trafalgar Medical Company, using React with TypeScript, SCSS and React Router",
+      cardGitHubLink:
+        "https://github.com/DanielCikora/Trafalgar-ReactJS-App.git",
+    },
   ];
   return (
     <>

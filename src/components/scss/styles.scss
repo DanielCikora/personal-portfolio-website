@@ -2,11 +2,13 @@
 @import "../scss/mqueries";
 @import "../scss/variables";
 @import "../scss/globalClasses";
+@import "../scss/keyframes";
 @import "../scss/layout";
 // Micro Components
 @import "../micro-components/logo";
 // Components
-@import "../navigation/navigationTop";
+@import "../navigation/navigation";
 @import "../hero/hero";
+@import "../services/services";
 // Pages
 @import '../navigation/pages/projects/projects';

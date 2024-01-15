@@ -1,0 +1,112 @@
+.navigation-top {
+  position: absolute;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  background-color: $navy;
+}
+.navigation-top--fixed {
+  position: fixed;
+}
+.navigation-top__wrapper {
+  align-self: center;
+  display: flex;
+  width: 100%;
+}
+.navigation-top__ul {
+  display: flex;
+  list-style-type: none;
+  column-gap: 40px;
+  align-items: center;
+  margin-left: auto;
+}
+// Logo
+.navigation-top__logo {
+  font-size: 30px;
+  font-weight: 700;
+  color: $grey;
+  text-decoration: none;
+  text-shadow: -1px -1px 0 $white, 1px -1px 0 $white, -1px 1px 0 $white,
+    1px 1px 0 $white;
+  margin-right: 80px;
+}
+// Hamburger Menu
+.hamburger {
+  margin-left: auto;
+  display: none;
+  background: transparent;
+  cursor: pointer;
+}
+.hamburger-line {
+  display: flex;
+  flex-direction: column;
+  width: 34px;
+  height: 4px;
+  background-color: $white;
+  border-radius: 2px;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+.hamburger-line--2 {
+  opacity: 1;
+}
+// Hamburger Button Opened
+.hamburger--opened {
+  .hamburger-line--1 {
+    transform: translate(0, 10px) rotate(-45deg);
+  }
+  .hamburger-line--2 {
+    opacity: 0;
+  }
+  .hamburger-line--3 {
+    transform: translate(0, -10px) rotate(45deg);
+  }
+}
+// Navigation Menu Opened
+.navigation-top--opened {
+  .navigation-top__ul {
+    padding-top: 100px;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    position: absolute;
+    width: 100%;
+    background-color: $navy;
+    top: 80px;
+    left: 0;
+    .navigation-top__link {
+      font-size: 20px;
+    }
+  }
+}
+// Responsive
+@include Laptop {
+  .navigation-top__ul {
+    column-gap: 30px;
+  }
+  .navigation-top__link {
+    font-size: 12px;
+  }
+}
+@include Tablet {
+  .navigation-top__ul {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+@include MobileL {
+  .navigation-top {
+    height: 60px;
+  }
+  .navigation-top--opened .navigation-top__ul {
+    top: 60px;
+    .navigation-top__link {
+      font-size: 16px;
+    }
+  }
+}

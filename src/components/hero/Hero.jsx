@@ -1,5 +1,8 @@
 import BGVideo from "../../assets/videos/pexels_videos_1839364 (1080p).mp4";
 import CVFile from "../../assets/files/Daniel Cikora FE Dev CV ENG.pdf";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSquareInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 export default function Hero() {
   return (
     <section className='hero'>
@@ -14,10 +17,31 @@ export default function Hero() {
           <h1 className='title hero-text__h1'>I AM DANIEL</h1>
           <h2 className='title hero-text__h2'>Frontend Developer</h2>
           <p className='paragraph hero-text__p'>
-            Crafting visually
-            appealing and user-friendly websites. Transforming ideas into
-            seamless and responsive digital experiences is my expertise.
+            Crafting visually appealing and user-friendly websites. Transforming
+            ideas into seamless and responsive digital experiences is my
+            expertise.
           </p>
+          <div className='hero-text__socials'>
+            <a
+              className='hero-socials__a'
+              href='mailto:d.cikora98@gmail.com'
+              target='_blank'
+              rel='noreferrer'
+            >
+              <FontAwesomeIcon icon={faEnvelope} className='hero-socials' />
+            </a>
+            <a
+              className='hero-socials__a'
+              href='https://www.instagram.com/_dissimulated_/'
+              target='_blank'
+              rel='noreferrer'
+            >
+              <FontAwesomeIcon
+                icon={faSquareInstagram}
+                className='hero-socials'
+              />
+            </a>
+          </div>
           <a
             href={CVFile}
             className='hero-text__download-btn'

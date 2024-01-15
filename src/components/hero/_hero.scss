@@ -1,8 +1,8 @@
 .hero-video__wrapper {
   width: 100%;
+  height: 100%;
   height: 100dvh;
   overflow: hidden;
-  position: relative;
 }
 .hero-video {
   width: 100%;
@@ -15,10 +15,12 @@
   position: absolute;
   top: 160px;
   max-width: 700px;
+  animation: fadeIn 2s forwards;
 }
 .hero-text__h1 {
   font-size: 60px;
   margin-bottom: 60px;
+  opacity: 1;
 }
 .hero-text__h2 {
   font-size: 26px;
@@ -29,8 +31,22 @@
 .hero-text__p {
   font-size: 22px;
   line-height: 24px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   max-width: 500px;
+}
+// Socials
+.hero-text__socials {
+  display: flex;
+  column-gap: 20px;
+  margin-bottom: 20px;
+}
+.hero-socials__a {
+  color: $white;
+  font-size: 36px;
+  display: block;
+  *:hover {
+    fill: $blue;
+  }
 }
 .hero-text__download-btn {
   line-height: 0;
