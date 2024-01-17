@@ -1,7 +1,10 @@
 import BGVideo from "../../assets/videos/pexels_videos_1839364 (1080p).mp4";
 import CVFile from "../../assets/files/Daniel Cikora FE Dev CV ENG.pdf";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSquareInstagram } from "@fortawesome/free-brands-svg-icons";
+import {
+  faSquareInstagram,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 export default function Hero() {
   return (
@@ -40,6 +43,14 @@ export default function Hero() {
                 icon={faSquareInstagram}
                 className='hero-socials'
               />
+            </a>
+            <a
+              className='hero-socials__a'
+              href='https://www.linkedin.com/in/daniel-cikora-a7344a253'
+              target='_blank'
+              rel='noreferrer'
+            >
+              <FontAwesomeIcon icon={faLinkedin} className='hero-socials' />
             </a>
           </div>
           <a

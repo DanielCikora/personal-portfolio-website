@@ -25,9 +25,11 @@ export default function Navigation() {
     };
   }, []);
   const linksArray = [
-    { id: 1, title: "PROJECTS", url: "/Projects" },
-    { id: 2, title: "CONTACT", url: "/Contact" },
-    { id: 3, title: "ABOUT", url: "/About" },
+    { id: 1, title: "HOME", url: "/" },
+    { id: 2, title: "PROJECTS", url: "/Projects" },
+    { id: 5, title: "SKILLS", url: "/Skills" },
+    { id: 4, title: "ABOUT", url: "/About" },
+    { id: 3, title: "CONTACT", url: "/Contact" },
   ];
   return (
     <header>

@@ -1,12 +1,11 @@
 // Services Text
 .services {
-  padding: 200px 0;
+  padding: 100px 0 200px;
   background-color: $green;
 }
 .services-text {
   display: flex;
-  // column-gap: 120px;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 .services-text__h2 {
   font-size: 46px;
@@ -24,8 +23,36 @@
 }
 // Media Query
 @include Tablet {
+  .services {
+    padding: 40px 0 100px;
+  }
   .services-text {
     flex-direction: column;
     text-align: center;
+  }
+  .services-text__h2 {
+    font-size: 36px;
+    margin-bottom: 80px;
+  }
+  .services-text__li {
+    font-size: 26px;
+  }
+}
+@include MobileL {
+  .services-text__h2 {
+    font-size: 28px;
+    margin-bottom: 60px;
+  }
+  .services-text__li {
+    font-size: 22px;
+  }
+}
+@include Mobile {
+  .services-text__h2 {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+  .services-text__li {
+    font-size: 18px;
   }
 }

@@ -3,7 +3,11 @@ export default function Services() {
     <section className='services'>
       <div className='wrapper wrapper--services'>
         <div className='services-text'>
-          <h2 className='services-text__h2'>WHAT I OFFER</h2>
+          <div className='services-text__slider'>
+            <div className='services-text__icon'>
+              <h2 className='services-text__h2'>WHAT I OFFER</h2>
+            </div>
+          </div>
           <ul className='services-text__ul'>
             <li className='services-text__li'>Custom Website Development</li>
             <li className='services-text__li'>User Experience (UX) Design</li>
