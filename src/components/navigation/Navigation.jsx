@@ -13,7 +13,7 @@ export default function Navigation() {
   useEffect(() => {
     const handleScroll = () => {
       const offset = window.scrollY;
-      if (offset > 80) {
+      if (offset > 40) {
         setIsFixed(true);
       } else {
         setIsFixed(false);

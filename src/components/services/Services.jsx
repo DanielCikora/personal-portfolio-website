@@ -1,4 +1,13 @@
 export default function Services() {
+  const servicesListItems = [
+    { key: 1, listText: "Custom Website Development" },
+    { key: 2, listText: "User Experience (UX) Design" },
+    { key: 3, listText: "Responsive Web Design" },
+    { key: 4, listText: "Social Media Integration" },
+    { key: 5, listText: "Consultation Services" },
+    { key: 6, listText: "Website Optimization" },
+    { key: 7, listText: "Content Strategy" },
+  ];
   return (
     <section className='services'>
       <div className='wrapper wrapper--services'>
@@ -9,13 +18,11 @@ export default function Services() {
             </div>
           </div>
           <ul className='services-text__ul'>
-            <li className='services-text__li'>Custom Website Development</li>
-            <li className='services-text__li'>User Experience (UX) Design</li>
-            <li className='services-text__li'>Responsive Web Design</li>
-            <li className='services-text__li'>Social Media Integration</li>
-            <li className='services-text__li'>Consultation Services</li>
-            <li className='services-text__li'>Website Optimization</li>
-            <li className='services-text__li'>Content Strategy</li>
+            {servicesListItems.map((servicesListItem) => (
+              <li key={servicesListItem.key} className='services-text__li'>
+                {servicesListItem.listText}
+              </li>
+            ))}
           </ul>
         </div>
       </div>
