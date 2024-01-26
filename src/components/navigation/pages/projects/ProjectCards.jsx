@@ -1,13 +1,13 @@
 import { useState } from "react";
 import TrafalgarImage from "../../../../assets/images/trafalgar-pixel-perfect-cut.png";
 export default function ProjectCards() {
-  const [isZoomedIn, setIsZoomedIn] = useState(false);
-  const openGallery = () => {
-    setIsZoomedIn(!isZoomedIn);
+  const [selectedCard, setSelectedCard] = useState(null);
+  const openGallery = (key) => {
+    setSelectedCard(key === selectedCard ? null : key);
   };
   const projectCardsContent = [
     {
-      id: 1,
+      key: 1,
       cardImgSrc: TrafalgarImage,
       cardAlt: "project-trafalgar",
       cardTitle: "Trafalgar Medical Company",
@@ -17,7 +17,7 @@ export default function ProjectCards() {
         "https://github.com/DanielCikora/Trafalgar-ReactJS-App.git",
     },
     {
-      id: 2,
+      key: 2,
       cardImgSrc: TrafalgarImage,
       cardAlt: "project-trafalgar",
       cardTitle: "Trafalgar Medical Company",
@@ -27,13 +27,16 @@ export default function ProjectCards() {
         "https://github.com/DanielCikora/Trafalgar-ReactJS-App.git",
     },
   ];
+
   return (
     <>
       {projectCardsContent.map((projectCard) => (
         <div
-          className={`projects-box${isZoomedIn ? " projects-box--opened" : ""}`}
-          key={projectCard.id}
-          onClick={openGallery}
+          className={`projects-box${
+            selectedCard === projectCard.key ? " projects-box--opened" : ""
+          }`}
+          key={projectCard.key}
+          onClick={() => openGallery(projectCard.key)}
         >
           <img
             className='projects-box__image'

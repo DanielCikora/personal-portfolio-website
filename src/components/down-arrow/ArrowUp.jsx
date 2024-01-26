@@ -1,13 +1,13 @@
 import { useState } from "react";
-import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-export default function DownArrow() {
+export default function ArrowUp() {
   const [scrollPosition, setScrollPosition] = useState(0);
   const handleScrollDown = () => {
     const screenHeight = window.innerHeight;
     const newPosition = scrollPosition + screenHeight;
     window.scrollTo({
-      top: newPosition,
+      top: 0,
       behavior: "smooth",
     });
     setScrollPosition(newPosition);
@@ -15,7 +15,7 @@ export default function DownArrow() {
   return (
     <button className='down-arrow' onClick={handleScrollDown}>
       <i className='scroll-icon'>
-        <FontAwesomeIcon icon={faArrowDown} className='scroll-icon' />
+        <FontAwesomeIcon icon={faArrowUp} className='scroll-icon' />
       </i>
     </button>
   );

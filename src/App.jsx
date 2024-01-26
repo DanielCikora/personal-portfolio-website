@@ -7,7 +7,8 @@ import Skills from "./components/navigation/pages/skills/Skills";
 import Services from "./components/services/Services";
 import Contact from "./components/navigation/pages/contact/Contact";
 import About from "./components/navigation/pages/about/About";
-import DownArrow from "./components/down-arrow/DownArrow";
+import ArrowUp from "./components/down-arrow/ArrowUp";
+import Footer from "./components/footer/Footer";
 export default function App() {
   return (
     <>
@@ -19,7 +20,7 @@ export default function App() {
             element={
               <>
                 <Hero />
-                <DownArrow />
+                <ArrowUp />
                 <Services />
               </>
             }
@@ -30,6 +31,7 @@ export default function App() {
           <Route path='/About' element={<About />} />
         </Routes>
       </Router>
+      <Footer />
     </>
   );
 }
