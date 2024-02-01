@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../micro-components/Logo";
+import ArrowUp from "../arrow-up/ArrowUp";
 export default function Navigation() {
   const [isFixed, setIsFixed] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const handleOpen = () => {
     setIsOpen(!isOpen);
@@ -13,11 +15,8 @@ export default function Navigation() {
   useEffect(() => {
     const handleScroll = () => {
       const offset = window.scrollY;
-      if (offset > 40) {
-        setIsFixed(true);
-      } else {
-        setIsFixed(false);
-      }
+      setIsScrolled(offset > 40);
+      setIsFixed(offset > 40);
     };
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -25,27 +24,28 @@ export default function Navigation() {
     };
   }, []);
   const linksArray = [
-    { id: 1, title: "HOME", url: "/" },
-    { id: 2, title: "PROJECTS", url: "/Projects" },
-    { id: 5, title: "SKILLS", url: "/Skills" },
-    { id: 4, title: "ABOUT", url: "/About" },
-    { id: 3, title: "CONTACT", url: "/Contact" },
+    { key: 1, title: "HOME", url: "/" },
+    { key: 2, title: "PROJECTS", url: "/Projects" },
+    { key: 3, title: "SKILLS", url: "/Skills" },
+    { key: 4, title: "ABOUT", url: "/About" },
+    { key: 5, title: "CONTACT", url: "/Contact" },
   ];
   return (
     <header>
       <nav
-        className={`navigation-top${isFixed ? " navigation-top--fixed" : ""}${
-          isOpen ? " navigation-top--opened" : ""
+        className={`navigation${isFixed ? " navigation--fixed" : ""}${
+          isOpen ? " navigation--opened" : ""
         }`}
       >
-        <div className='wrapper navigation-top__wrapper'>
+        {isScrolled && <ArrowUp />}
+        <div className='wrapper navigation__wrapper'>
           <Logo />
-          <ul className='navigation-top__ul'>
+          <ul className='navigation__ul'>
             {linksArray.map((link) => (
-              <li key={link.id}>
+              <li key={link.key}>
                 <Link
                   to={link.url}
-                  className='main-link navigation-top__link'
+                  className='main-link navigation__link'
                   onClick={handleClose}
                 >
                   {link.title}

@@ -7,7 +7,6 @@ import Skills from "./components/navigation/pages/skills/Skills";
 import Services from "./components/services/Services";
 import Contact from "./components/navigation/pages/contact/Contact";
 import About from "./components/navigation/pages/about/About";
-import ArrowUp from "./components/down-arrow/ArrowUp";
 import Footer from "./components/footer/Footer";
 export default function App() {
   return (
@@ -20,7 +19,6 @@ export default function App() {
             element={
               <>
                 <Hero />
-                <ArrowUp />
                 <Services />
               </>
             }

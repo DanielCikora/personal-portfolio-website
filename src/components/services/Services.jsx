@@ -1,11 +1,34 @@
+import ServicesAccordion from "./ServicesAccordion";
 import TerminalImage from "../../assets/images/terminal.png";
+import { useState } from "react";
 export default function Services() {
-  const servicesListItems = [
-    { key: 1, listText: "Custom Website Development" },
-    { key: 2, listText: "Responsive Web Development" },
-    { key: 3, listText: "Social Media Integration" },
-    { key: 4, listText: "Consultation Services" },
-    { key: 5, listText: "Website Optimization" },
+  const [openIndex, setOpenIndex] = useState(null);
+  const accordionItems = [
+    {
+      key: 1,
+      accordionTitle: "Custom Website Development",
+      accordionParagraph: "bana1",
+    },
+    {
+      key: 2,
+      accordionTitle: "Responsive Web Development",
+      accordionParagraph: "bana2",
+    },
+    {
+      key: 3,
+      accordionTitle: "Social Media Integration",
+      accordionParagraph: "bana3",
+    },
+    {
+      key: 4,
+      accordionTitle: "Consultation Services",
+      accordionParagraph: "bana4",
+    },
+    {
+      key: 5,
+      accordionTitle: "Website Optimization",
+      accordionParagraph: "bana5",
+    },
   ];
   return (
     <section className='services'>
@@ -22,13 +45,18 @@ export default function Services() {
               alt='terminal'
             />
           </div>
-          <ul className='services-text__ul'>
-            {servicesListItems.map((servicesListItem) => (
-              <li key={servicesListItem.key} className='services-text__li'>
-                {servicesListItem.listText}
-              </li>
+          <div className='services-text__accordion'>
+            {accordionItems.map((accordionItem, index) => (
+              <ServicesAccordion
+                key={accordionItem.key}
+                index={index}
+                title={accordionItem.accordionTitle}
+                text={accordionItem.accordionParagraph}
+                openIndex={openIndex}
+                setOpenIndex={setOpenIndex}
+              />
             ))}
-          </ul>
+          </div>
         </div>
       </div>
     </section>

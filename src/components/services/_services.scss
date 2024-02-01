@@ -29,74 +29,9 @@
   color: $white;
   margin-bottom: 60px;
 }
-.services-text__ul {
-  list-style: none;
+.services-text__accordion{
   display: flex;
   flex-direction: column;
-  row-gap: 16px;
-}
-.services-text__li {
-  font-size: 30px;
-  color: $white;
-}
-// Media Query
-@include Laptop {
-  .services-text {
-    justify-content: space-between;
-  }
-  .services-text__ul {
-    justify-content: center;
-  }
-  .services-text__li {
-    font-size: 26px;
-  }
-}
-@include Tablet {
-  .services {
-    padding: 40px 0 100px;
-  }
-  .services-text__image {
-    margin-bottom: 80px;
-  }
-  .services-image {
-    margin: 0 auto;
-  }
-  .services-text {
-    flex-direction: column;
-    text-align: center;
-  }
-  .services-text__h2 {
-    font-size: 36px;
-    margin-bottom: 80px;
-  }
-  .services-text__h2--double {
-    display: none;
-  }
-  .services-text__li {
-    font-size: 26px;
-  }
-}
-@include MobileL {
-  .services-text__image {
-    margin-bottom: 40px;
-  }
-  .services-image {
-    max-width: 240px;
-  }
-  .services-text__h2 {
-    font-size: 28px;
-    margin-bottom: 40px;
-  }
-  .services-text__li {
-    font-size: 22px;
-  }
-}
-@include Mobile {
-  .services-text__h2 {
-    font-size: 24px;
-    margin-bottom: 40px;
-  }
-  .services-text__li {
-    font-size: 18px;
-  }
+  justify-content: flex-end;
+  row-gap: 4px;
 }

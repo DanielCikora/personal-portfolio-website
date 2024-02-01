@@ -1,21 +1,22 @@
-.navigation-top {
+.navigation {
   position: absolute;
   top: 0;
   z-index: 9999;
   width: 100%;
   height: 80px;
   display: flex;
+  border-bottom: 2px solid $black;
   background-color: $navy;
 }
-.navigation-top--fixed {
+.navigation--fixed {
   position: fixed;
 }
-.navigation-top__wrapper {
+.navigation__wrapper {
   align-self: center;
   display: flex;
   width: 100%;
 }
-.navigation-top__ul {
+.navigation__ul {
   display: flex;
   list-style-type: none;
   column-gap: 40px;
@@ -23,7 +24,7 @@
   margin-left: auto;
 }
 // Logo
-.navigation-top__logo {
+.navigation__logo {
   font-size: 30px;
   font-weight: 700;
   color: $grey;
@@ -65,8 +66,8 @@
   }
 }
 // Navigation Menu Opened
-.navigation-top--opened {
-  .navigation-top__ul {
+.navigation--opened {
+  .navigation__ul {
     padding-top: 100px;
     height: 100dvh;
     display: flex;
@@ -77,27 +78,36 @@
     background-color: $navy;
     top: 80px;
     left: 0;
-    .navigation-top__link {
+    .navigation__link {
       font-size: 20px;
     }
   }
 }
 // Responsive
 @include Landscape {
-  .navigation-top {
+  .navigation {
     height: 60px;
+  }
+
+  .navigation--opened {
+    .navigation__ul {
+      top: 60px;
+      .navigation__link {
+        font-size: 18px;
+      }
+    }
   }
 }
 @include Laptop {
-  .navigation-top__ul {
+  .navigation__ul {
     column-gap: 30px;
   }
-  .navigation-top__link {
+  .navigation__link {
     font-size: 12px;
   }
 }
 @include Tablet {
-  .navigation-top__ul {
+  .navigation__ul {
     display: none;
   }
   .hamburger {
@@ -105,12 +115,12 @@
   }
 }
 @include MobileL {
-  .navigation-top {
+  .navigation {
     height: 60px;
   }
-  .navigation-top--opened .navigation-top__ul {
+  .navigation--opened .navigation__ul {
     top: 60px;
-    .navigation-top__link {
+    .navigation__link {
       font-size: 18px;
     }
   }
