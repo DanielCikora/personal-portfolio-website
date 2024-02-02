@@ -7,27 +7,32 @@ export default function Services() {
     {
       key: 1,
       accordionTitle: "Custom Website Development",
-      accordionParagraph: "bana1",
+      accordionParagraph:
+        "Tailor-made digital solutions that align with your brand identity and business objectives for a standout online presence.",
     },
     {
       key: 2,
       accordionTitle: "Responsive Web Development",
-      accordionParagraph: "bana2",
+      accordionParagraph:
+        "Ensure optimal user experience on any device with fluid and adaptive design techniques.",
     },
     {
       key: 3,
       accordionTitle: "Social Media Integration",
-      accordionParagraph: "bana3",
+      accordionParagraph:
+        "Seamlessly integrate social platforms to enhance audience engagement and expand online reach.",
     },
     {
       key: 4,
       accordionTitle: "Consultation Services",
-      accordionParagraph: "bana4",
+      accordionParagraph:
+        "Gain valuable insights and tailored strategies to elevate your online presence and achieve your business goals.",
     },
     {
       key: 5,
       accordionTitle: "Website Optimization",
-      accordionParagraph: "bana5",
+      accordionParagraph:
+        "Enhance website performance and user experience through strategic optimizations, ensuring maximum impact and visibility.",
     },
   ];
   return (

@@ -10,16 +10,13 @@ export default function ServicesAccordion({
     setOpenIndex(isOpenAcc ? null : index);
   };
   return (
-    <button
-      className={`accordion-btn${isOpenAcc ? " accordion-btn--open" : ""}`}
-      onClick={handleOpenAcc}
-    >
-      <h2 className='title accordion-btn__title'>{title}</h2>
-      {isOpenAcc && (
-        <span className='accordion-details'>
-          <p className='paragraph accordion-details__p'>{text}</p>
-        </span>
-      )}
-    </button>
+    <div className={`accordion${isOpenAcc ? " accordion--open" : ""}`}>
+      <button className="accordion-btn" onClick={handleOpenAcc}>
+        <h2 className='title accordion-btn__title'>{title}</h2>
+      </button>
+      <span className='accordion-details'>
+        <p className='paragraph accordion-details__p'>{text}</p>
+      </span>
+    </div>
   );
 }
