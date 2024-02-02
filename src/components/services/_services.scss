@@ -35,3 +35,15 @@
   justify-content: flex-end;
   row-gap: 4px;
 }
+// Responsive
+@include Tablet {
+  .services-text {
+    flex-direction: column;
+  }
+  .services-text__image {
+    margin: 0 auto 60px auto;
+  }
+  .services-text__accordion {
+    align-items: center;
+  }
+}
