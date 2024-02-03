@@ -63,3 +63,17 @@
     font-size: 16px;
   }
 }
+@include MobileMini {
+  .accordion--open {
+    .accordion-details {
+      height: 80px;
+    }
+  }
+  .accordion-btn__title {
+    font-size: 14px;
+  }
+  .accordion-details__p {
+    font-size: 14px;
+    padding: 4px;
+  }
+}
