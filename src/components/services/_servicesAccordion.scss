@@ -16,11 +16,11 @@
 }
 .accordion-details {
   display: flex;
-  background-color: $grey;
+  background-color: $blue;
   height: 0;
   overflow: hidden;
   text-align: center;
-  transition: height 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   border-radius: 0 0 4px 4px;
 }
 .accordion-btn__title {
@@ -37,5 +37,29 @@
   }
   .accordion-details {
     height: 140px;
+  }
+}
+// Responsive
+@include MobileL {
+  .services {
+    padding: 100px 0;
+  }
+  .accordion {
+    max-width: 300px;
+  }
+  .accordion-btn {
+    height: 60px;
+  }
+  .accordion-btn__title {
+    font-size: 16px;
+  }
+  .accordion--open {
+    .accordion-details {
+      height: 100px;
+    }
+  }
+  .accordion-details__p {
+    padding: 10px;
+    font-size: 16px;
   }
 }

@@ -36,14 +36,31 @@
   row-gap: 4px;
 }
 // Responsive
+@include Laptop {
+  .services-text {
+    justify-content: space-between;
+  }
+}
 @include Tablet {
   .services-text {
     flex-direction: column;
   }
   .services-text__image {
+    text-align: center;
     margin: 0 auto 60px auto;
+  }
+  .services-text__h2 {
+    width: 100%;
   }
   .services-text__accordion {
     align-items: center;
+  }
+}
+@include MobileL {
+  .services-text__h2, .services-text__h2--double {
+    font-size: 28px;
+  }
+  .services-image {
+    max-width: 260px;
   }
 }
