@@ -26,6 +26,26 @@ export default function ProjectCards() {
       cardGitHubLink:
         "https://github.com/DanielCikora/Trafalgar-ReactJS-App.git",
     },
+    {
+      key: 3,
+      cardImgSrc: TrafalgarImage,
+      cardAlt: "project-trafalgar",
+      cardTitle: "Trafalgar Medical Company",
+      cardDescription:
+        "Website for Trafalgar Medical Company, using React with TypeScript, SCSS and React Router",
+      cardGitHubLink:
+        "https://github.com/DanielCikora/Trafalgar-ReactJS-App.git",
+    },
+    {
+      key: 4,
+      cardImgSrc: TrafalgarImage,
+      cardAlt: "project-trafalgar",
+      cardTitle: "Trafalgar Medical Company",
+      cardDescription:
+        "Website for Trafalgar Medical Company, using React with TypeScript, SCSS and React Router",
+      cardGitHubLink:
+        "https://github.com/DanielCikora/Trafalgar-ReactJS-App.git",
+    },
   ];
 
   return (
@@ -50,12 +70,12 @@ export default function ProjectCards() {
             </p>
           </div>
           <a
-            className='main-link projects-box__a'
+            className='cta projects-box__a'
             href={projectCard.cardGitHubLink}
             target='_blank'
             rel='noreferrer'
           >
-            Link to the Project
+            View Code
           </a>
         </div>
       ))}

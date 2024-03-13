@@ -1,0 +1,69 @@
+.contact {
+  background-color: $light-cream;
+}
+.wrapper--contact {
+  padding: 100px 0;
+}
+// Text
+.contact-text__container {
+  padding-bottom: 500px;
+  text-align: center;
+}
+.contact-text__h2 {
+  font-size: 46px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  margin-bottom: 40px;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 120px;
+    background-color: $black;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+// Form
+.form-label {
+  display: block;
+  color: $black;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+#email-input {
+  display: block;
+  padding: 20px 100px 20px 20px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  &::placeholder {
+    color: $lightgrey;
+  }
+}
+#message-area {
+  display: block;
+  border-radius: 4px;
+  resize: none;
+  padding: 20px;
+  margin-bottom: 40px;
+  &::placeholder {
+    color: $lightgrey;
+  }
+}
+#send-input {
+  display: block;
+  padding: 20px 30px;
+  border-radius: 4px;
+  color: $white;
+  background-color: $lightgrey;
+  transition: all 0.3s ease-in-out;
+  color: $black;
+  font-size: 18px;
+  cursor: pointer;
+  &:hover {
+    color: $white;
+    background-color: $navy;
+  }
+}

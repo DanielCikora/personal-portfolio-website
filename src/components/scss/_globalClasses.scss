@@ -32,3 +32,17 @@
     }
   }
 }
+.cta {
+  color: $white;
+  text-decoration: none;
+  line-height: 0;
+  padding: 24px 34px;
+  background-color: $navy;
+  font-size: 16px;
+  border-radius: 50px;
+  display: inline-block;
+  text-align: center;
+  &:hover {
+    text-decoration: underline 2px solid $white;
+  }
+}

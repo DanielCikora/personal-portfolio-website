@@ -21,18 +21,17 @@
 // Projects Box
 .wrapper--projects {
   position: relative;
-  display: flex;
+  display: grid;
   padding-top: 40px;
-  max-width: 800px;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  gap: 20px;
+  place-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-rows: auto;
+  gap: 30px;
 }
 .projects-box {
   background-color: $blue;
-  height: 420px;
   max-width: 300px;
-  padding: 16px 16px 0 16px;
+  padding: 16px;
   display: flex;
   flex-direction: column;
   border-radius: 8px;
@@ -77,11 +76,5 @@
 }
 .projects-box__a {
   font-size: 20px;
-  &::before {
-    display: none;
-  }
-  &:hover {
-    text-decoration: 2px solid $white underline;
-    border-radius: 8px;
-  }
+  padding: 20px 20px;
 }

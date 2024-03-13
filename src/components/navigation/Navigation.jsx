@@ -26,9 +26,8 @@ export default function Navigation() {
   const linksArray = [
     { key: 1, title: "HOME", url: "/" },
     { key: 2, title: "PROJECTS", url: "/Projects" },
-    { key: 3, title: "SKILLS", url: "/Skills" },
-    { key: 4, title: "ABOUT", url: "/About" },
-    { key: 5, title: "CONTACT", url: "/Contact" },
+    { key: 3, title: "ABOUT", url: "/About" },
+    { key: 4, title: "CONTACT", url: "/Contact" },
   ];
   return (
     <header>
