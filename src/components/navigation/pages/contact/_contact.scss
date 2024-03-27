@@ -2,11 +2,11 @@
   background-color: $light-cream;
 }
 .wrapper--contact {
-  padding: 100px 0;
+  padding: 80px 0;
 }
 // Text
 .contact-text__container {
-  padding-bottom: 500px;
+  padding-bottom: 300px;
   text-align: center;
 }
 .contact-text__h2 {
@@ -19,25 +19,38 @@
     position: absolute;
     content: "";
     height: 2px;
-    width: 120px;
+    width: 80px;
     background-color: $black;
     bottom: -10px;
     left: 50%;
     transform: translateX(-50%);
   }
 }
+.contact-text__p {
+  font-size: 22px;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0 20px;
+}
 // Form
+.form-container {
+  padding: 0 20px;
+}
+.form {
+  display: block;
+}
 .form-label {
   display: block;
   color: $black;
   margin-bottom: 10px;
-  font-size: 18px;
+  font-size: 20px;
 }
 #email-input {
   display: block;
   padding: 20px 100px 20px 20px;
   border-radius: 4px;
   margin-bottom: 20px;
+  font-size: 20px;
   &::placeholder {
     color: $lightgrey;
   }
@@ -48,6 +61,7 @@
   resize: none;
   padding: 20px;
   margin-bottom: 40px;
+  font-size: 20px;
   &::placeholder {
     color: $lightgrey;
   }
@@ -60,10 +74,73 @@
   background-color: $lightgrey;
   transition: all 0.3s ease-in-out;
   color: $black;
-  font-size: 18px;
+  font-size: 20px;
   cursor: pointer;
   &:hover {
     color: $white;
     background-color: $navy;
+  }
+}
+// Media Query
+@include Laptop {
+  .wrapper--contact {
+    padding: 80px 0;
+  }
+  .contact-text__h2 {
+    font-size: 36px;
+    &::before {
+      bottom: -2px;
+    }
+  }
+  .form-label {
+    font-size: 16px;
+  }
+  #email-input {
+    padding: 16px 16px 16px 16px;
+    &::placeholder {
+      font-size: 16px;
+    }
+  }
+  #message-area {
+    font-size: 16px;
+  }
+  #send-input {
+    font-size: 16px;
+  }
+}
+@include Tablet {
+  .contact-text__h2 {
+    font-size: 32px;
+  }
+  .form-container {
+    justify-content: center;
+    display: flex;
+  }
+  .form-label {
+    margin-bottom: 0;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 100%;
+    max-width: 500px;
+  }
+  #send-input {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+}
+@include MobileL {
+  .form {
+    max-width: 100%;
+    row-gap: 4px;
+  }
+  #message-area {
+    margin-bottom: 20px;
+  }
+  #send-input {
+    max-width: 100%;
+    width: 100%;
   }
 }

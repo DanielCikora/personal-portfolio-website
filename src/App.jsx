@@ -28,8 +28,8 @@ export default function App() {
           <Route path='/Contact' element={<Contact />} />
           <Route path='/About' element={<About />} />
         </Routes>
+        <Footer />
       </Router>
-      <Footer />
     </>
   );
 }

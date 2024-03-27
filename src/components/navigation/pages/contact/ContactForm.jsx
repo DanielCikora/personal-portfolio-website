@@ -19,7 +19,7 @@ export default function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className='form' onSubmit={handleSubmit}>
       <label className='form-label' htmlFor='email-input'>
         Your e-mail address:
       </label>
