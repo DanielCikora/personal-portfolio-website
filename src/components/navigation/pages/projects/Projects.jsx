@@ -1,10 +1,10 @@
 import ProjectCards from "./ProjectCards";
-import ProjectsVideo from "../../../../assets/videos/pexels-pavel-danilyuk-5215219 (1080p).mp4";
+import ProjectsImage from "../../../../assets/images/projects.jpg";
 export default function Projects() {
   return (
     <section className='projects'>
-      <div className='projects-video__wrapper'>
-        <video className='projects-video' src={ProjectsVideo} autoPlay muted loop/>
+      <div className='projects-image__wrapper'>
+        <img className='projects-image' src={ProjectsImage} alt='projects' />
       </div>
       <div className='wrapper wrapper--projects'>
         <ProjectCards />
