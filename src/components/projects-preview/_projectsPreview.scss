@@ -1,12 +1,10 @@
 .projects-preview {
-  padding: 300px 0;
+  padding: 500px 0;
 }
-.wrapper--projects-preview {
+.projects-wrapper {
   display: flex;
-  justify-content: space-between;
 }
 .projects-preview-text {
-  max-width: 400px;
   width: 100%;
 }
 .projects-preview-text__title {
@@ -17,51 +15,24 @@
   margin-bottom: 20px;
   color: $black;
 }
-// Swiper
-.swiper {
-  overflow: hidden;
-}
-.swiper-wrapper {
-  display: flex;
-  overflow: hidden;
-}
-.projects-preview-slider__wrapper {
-  display: flex;
+// Slider Image
+.slider-image {
+  height: auto;
   width: 100%;
   max-width: 500px;
-  max-height: 500px;
-  height: 100%;
-  align-items: center;
-  position: relative;
+  display: block;
+  margin: 0 auto;
+  border-radius: 4px;
+  object-fit: cover;
 }
-.projects-preview-button {
-  background: none;
-  font-size: 40px;
-  color: $navy;
-  transition: all 0.2s ease-in-out;
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 2;
-  &:hover {
-    color: $grey;
-  }
-}
-.projects-preview-button--prev {
-  left: 0;
-}
-.projects-preview-button--next {
-  right: 0;
-}
-// Swiper Slides
-.swiper-slide {
-  width: 100%;
-  height: 100%;
+// Swiper Controls
+.projects-btn__wrapper {
   display: flex;
+  column-gap: 40px;
 }
-.swiper-slide__image {
-  width: 100%;
-  height: 100%;
-  background-size: cover;
+.projects-preview-btn {
+  z-index: 99;
+  font-size: 44px;
+  background: none;
+  cursor: pointer;
 }
