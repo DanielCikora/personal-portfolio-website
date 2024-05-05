@@ -1,4 +1,4 @@
-import BGVideo from "../../assets/videos/pexels_videos_1839364 (1080p).mp4";
+import BGVideo from "../../assets/videos/blob.mp4";
 import CVFile from "../../assets/files/Daniel Cikora FE Dev CV ENG.pdf";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {

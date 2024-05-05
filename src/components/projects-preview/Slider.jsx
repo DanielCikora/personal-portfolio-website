@@ -29,17 +29,13 @@ export default function Slider() {
         }}
       >
         <SwiperSlide>
-          <img
-            className='slider-image'
-            src={MountainImage}
-            alt='project-image'
-          />
+          <img className='slider-image' src={MountainImage} alt='mountain' />
         </SwiperSlide>
         <SwiperSlide>
-          <img className='slider-image' src={DesertImage} alt='project-image' />
+          <img className='slider-image' src={DesertImage} alt='desert' />
         </SwiperSlide>
         <SwiperSlide>
-          <img className='slider-image' src={ForestImage} alt='project-image' />
+          <img className='slider-image' src={ForestImage} alt='forest' />
         </SwiperSlide>
       </Swiper>
     </>
