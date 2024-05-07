@@ -84,6 +84,14 @@
   }
 }
 // Responsive
+@include LaptopXL {
+  .navigation {
+    height: 76px;
+  }
+  .navigation__link {
+    font-size: 16px;
+  }
+}
 @include Landscape {
   .navigation {
     height: 60px;

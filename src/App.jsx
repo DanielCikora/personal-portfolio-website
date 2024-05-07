@@ -1,6 +1,7 @@
 import "../src/components/scss/styles.scss";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navigation from "./components/navigation/Navigation";
+import DarkMode from "./components/micro-components/DarkMode";
 import Hero from "./components/hero/Hero";
 import Projects from "./components/navigation/pages/projects/Projects";
 import Services from "./components/services/Services";
@@ -18,6 +19,7 @@ export default function App() {
             path='/'
             element={
               <>
+                <DarkMode />
                 <Hero />
                 <Services />
                 <ProjectsPreview />
