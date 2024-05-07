@@ -1,6 +1,6 @@
 import FooterLinks from "./FooterLinks";
 import Logo from "../micro-components/Logo";
-export default function Footer(props) {
+export default function Footer() {
   const fullYearDate = new Date().getFullYear();
   return (
     <footer className='footer'>

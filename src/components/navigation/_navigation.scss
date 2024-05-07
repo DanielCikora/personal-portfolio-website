@@ -5,8 +5,9 @@
   width: 100%;
   height: 90px;
   display: flex;
-  border-bottom: 1px solid $black;
-  background-color: $navy;
+  background-color: $black;
+  animation: fadeIn 1s forwards;
+  opacity: 1;
 }
 .navigation--fixed {
   position: fixed;
