@@ -2,6 +2,7 @@
   display: grid;
   place-items: center;
   height: 100dvh;
-  color: $black;
-  background-color: $lightgrey;
+  width: 100%;
+  background-color: $black;
+  animation: timedFade 3s;
 }

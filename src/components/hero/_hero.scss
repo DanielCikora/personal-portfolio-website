@@ -50,23 +50,22 @@
   font-size: 36px;
   display: block;
   *:hover {
-    fill: $blue;
+    transition: all 0.2s ease-in-out;
+    fill: $grey;
   }
 }
 .hero-text__download-btn {
-  line-height: 0;
   display: inline-block;
   color: $black;
-  padding: 24px 40px;
+  padding: 16px 40px;
   background-color: $white;
   border-radius: 100px;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
-  border: 1px solid $navy;
   font-weight: 600;
   &:hover {
     color: $white;
-    background-color: $navy;
+    background-color: $grey;
   }
 }
 // Media Query

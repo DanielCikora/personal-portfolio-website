@@ -14,47 +14,26 @@ export default function App() {
   return (
     <>
       <Router>
-        <Navigation />
-        <Routes>
-          <Route
-            path='/'
-            element={
-              <>
-                <DarkMode />
-                <SlowLoad>
+        <SlowLoad>
+          <Navigation />
+          <Routes>
+            <Route
+              path='/'
+              element={
+                <>
+                  <DarkMode />
                   <Hero />
                   <Services />
                   <ProjectsPreview />
-                </SlowLoad>
-              </>
-            }
-          />
-          <Route
-            path='/Projects'
-            element={
-              <SlowLoad>
-                <Projects />
-              </SlowLoad>
-            }
-          />
-          <Route
-            path='/Contact'
-            element={
-              <SlowLoad>
-                <Contact />
-              </SlowLoad>
-            }
-          />
-          <Route
-            path='/About'
-            element={
-              <SlowLoad>
-                <About />
-              </SlowLoad>
-            }
-          />
-        </Routes>
-        <Footer />
+                </>
+              }
+            />
+            <Route path='/Projects' element={<Projects />} />
+            <Route path='/Contact' element={<Contact />} />
+            <Route path='/About' element={<About />} />
+          </Routes>
+          <Footer />
+        </SlowLoad>
       </Router>
     </>
   );

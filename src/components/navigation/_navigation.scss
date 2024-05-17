@@ -6,11 +6,28 @@
   height: 90px;
   display: flex;
   background-color: $black;
-  animation: fadeIn 1s forwards;
+  animation: fadeIn 2s normal;
   opacity: 1;
 }
+// Browser Scrollbar
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: $lightgrey;
+}
+::-webkit-scrollbar-thumb {
+  background: $grey;
+  border-radius: 24px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  cursor: pointer;
+}
+/////////////////////
 .navigation--fixed {
   position: fixed;
+  animation: slideDown 1.5s normal;
 }
 .navigation__wrapper {
   align-self: center;
@@ -23,16 +40,6 @@
   column-gap: 40px;
   align-items: center;
   margin-left: auto;
-}
-// Logo
-.navigation__logo {
-  font-size: 30px;
-  font-weight: 700;
-  color: $grey;
-  text-decoration: none;
-  text-shadow: -1px -1px 0 $white, 1px -1px 0 $white, -1px 1px 0 $white,
-    1px 1px 0 $white;
-  margin-right: 80px;
 }
 // Hamburger Menu
 .hamburger {
@@ -76,7 +83,7 @@
     row-gap: 20px;
     position: absolute;
     width: 100%;
-    background-color: $navy;
+    background-color: $black;
     top: 80px;
     left: 0;
     .navigation__link {
@@ -119,6 +126,11 @@
   .navigation__ul {
     display: none;
   }
+  .navigation--opened {
+    .navigation__ul {
+      top: 60px;
+    }
+  }
   .hamburger {
     display: block;
   }
@@ -128,7 +140,7 @@
     height: 60px;
   }
   .navigation--opened .navigation__ul {
-    top: 60px;
+    top: 40px;
     .navigation__link {
       font-size: 18px;
     }

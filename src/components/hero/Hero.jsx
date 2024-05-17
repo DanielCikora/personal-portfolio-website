@@ -1,10 +1,7 @@
 import BGVideo from "../../assets/videos/blob.mp4";
 import CVFile from "../../assets/files/Daniel Cikora FE Dev CV ENG.pdf";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faSquareInstagram,
-  faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 export default function Hero() {
   return (
@@ -35,22 +32,19 @@ export default function Hero() {
             </a>
             <a
               className='hero-socials__a'
-              href='https://www.instagram.com/_dissimulated_/'
-              target='_blank'
-              rel='noreferrer'
-            >
-              <FontAwesomeIcon
-                icon={faSquareInstagram}
-                className='hero-socials'
-              />
-            </a>
-            <a
-              className='hero-socials__a'
               href='https://www.linkedin.com/in/daniel-cikora-a7344a253'
               target='_blank'
               rel='noreferrer'
             >
               <FontAwesomeIcon icon={faLinkedin} className='hero-socials' />
+            </a>
+            <a
+              className='hero-socials__a'
+              href='https://github.com/DanielCikora'
+              target='_blank'
+              rel='noreferrer'
+            >
+              <FontAwesomeIcon icon={faGithub} className='hero-socials' />
             </a>
           </div>
           <a

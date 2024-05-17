@@ -15,8 +15,8 @@ export default function Navigation() {
   useEffect(() => {
     const handleScroll = () => {
       const offset = window.scrollY;
-      setIsScrolled(offset > 40);
-      setIsFixed(offset > 40);
+      setIsScrolled(offset > 90);
+      setIsFixed(offset > 90);
     };
     window.addEventListener("scroll", handleScroll);
     return () => {

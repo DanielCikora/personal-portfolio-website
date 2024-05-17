@@ -3,3 +3,21 @@
     opacity: 0;
   }
 }
+@keyframes slideDown {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 0;
+  }
+}
+@keyframes timedFade {
+  from {
+    opacity: 1;
+    filter: blur(1);
+  }
+  to {
+    opacity: 0;
+    filter: blur(0);
+  }
+}
