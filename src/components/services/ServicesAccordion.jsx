@@ -11,7 +11,7 @@ export default function ServicesAccordion({
   };
   return (
     <div className={`accordion${isOpenAcc ? " accordion--open" : ""}`}>
-      <button className="accordion-btn" onClick={handleOpenAcc}>
+      <button className='accordion-btn' onClick={handleOpenAcc}>
         <h2 className='title accordion-btn__title'>{title}</h2>
       </button>
       <span className='accordion-details'>

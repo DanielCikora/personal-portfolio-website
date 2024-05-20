@@ -411,7 +411,6 @@ body {
   height: 100dvh;
   width: 100%;
   background-color: #040d12;
-  animation: timedFade 3s;
 }
 
 .logo {
@@ -437,20 +436,21 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 14px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #afb9c5;
+  background: #484e52;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #484e52;
-  border-radius: 24px;
+  background: #afb9c5;
+  border-radius: 6px;
+  border: 2px solid black;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: rgb(120, 120, 120);
   cursor: pointer;
 }
 
@@ -478,6 +478,7 @@ body {
   display: none;
   background: transparent;
   cursor: pointer;
+  overflow: hidden;
 }
 
 .hamburger-line {
@@ -491,17 +492,28 @@ body {
   transition: 0.4s;
 }
 
+.hamburger-line--1 {
+  width: 28px;
+}
+
 .hamburger-line--2 {
   opacity: 1;
 }
 
+.hamburger-line--3 {
+  width: 24px;
+}
+
 .hamburger--opened .hamburger-line--1 {
   transform: translate(0, 10px) rotate(-45deg);
+  width: initial;
 }
 .hamburger--opened .hamburger-line--2 {
+  transform: translateX(100%);
   opacity: 0;
 }
 .hamburger--opened .hamburger-line--3 {
+  width: initial;
   transform: translate(0, -10px) rotate(45deg);
 }
 
@@ -625,6 +637,17 @@ body {
   min-height: 100vh;
   overflow: hidden;
   position: relative;
+  z-index: -1;
+}
+.hero-video__wrapper::before {
+  content: "";
+  position: absolute;
+  background-color: rgba(4, 13, 18, 0.4);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  top: 0;
+  left: 0;
 }
 
 .hero-video {
@@ -708,7 +731,6 @@ body {
     max-width: 600px;
     justify-content: center;
     width: 100%;
-    background: 1px 1px rgba(4, 13, 18, 0.4);
     border-radius: 4px;
     padding: 20px;
   }
@@ -737,7 +759,11 @@ body {
     font-size: 48px;
   }
   .hero-text__h2 {
-    font-size: 22px;
+    font-size: 28px;
+  }
+  .hero-text__p {
+    margin-bottom: 20px;
+    line-height: 28px;
   }
   .hero-text__download-btn {
     font-size: 16px;
@@ -752,15 +778,17 @@ body {
     left: 0;
   }
   .hero-text__h1 {
-    font-size: 40px;
+    font-size: 42px;
+    margin-bottom: 20px;
   }
   .hero-text__h2 {
-    font-size: 22px;
+    font-size: 24px;
   }
   .hero-text__p {
     max-width: 100%;
     font-size: 18px;
     padding: 0 30px;
+    line-height: 24px;
   }
   .hero-text__socials {
     justify-content: center;
@@ -769,9 +797,17 @@ body {
     font-size: 16px;
   }
 }
+@media only screen and (max-width: 320px) {
+  .hero-text__p {
+    padding: 0;
+  }
+  .hero-text__download-btn {
+    width: 100%;
+  }
+}
 .services {
   padding: 100px 0 200px;
-  background-color: #02383c;
+  background-color: #344955;
 }
 
 .services-text {
@@ -832,62 +868,18 @@ body {
   }
 }
 @media only screen and (max-width: 425px) {
+  .services {
+    padding: 40px 0 80px;
+  }
   .services-text__h2,
   .services-text__h2--double {
-    font-size: 28px;
+    font-size: 36px;
+  }
+  .services-text__image {
+    margin-bottom: 0;
   }
   .services-image {
-    max-width: 260px;
-  }
-}
-.accordion {
-  max-width: 400px;
-  width: 100%;
-}
-
-.accordion-btn {
-  background-color: #111f28;
-  border-radius: 4px;
-  border: 1px solid #040d12;
-  width: 100%;
-  height: 80px;
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
-}
-.accordion-btn:hover {
-  border-color: #eeeeee;
-}
-
-.accordion-details {
-  display: flex;
-  background-color: #31363f;
-  height: 0;
-  overflow: hidden;
-  text-align: center;
-  transition: all 0.3s ease-in-out;
-  border-radius: 0 0 4px 4px;
-}
-
-.accordion-btn__title {
-  font-weight: 500;
-  font-size: 22px;
-}
-
-.accordion-details__p {
-  font-size: 20px;
-  padding: 0 16px;
-}
-
-.accordion--open .accordion-btn {
-  border-radius: 4px 4px 0 0;
-}
-.accordion--open .accordion-details {
-  height: 140px;
-}
-
-@media only screen and (max-width: 425px) {
-  .services {
-    padding: 100px 0;
+    display: none;
   }
   .accordion {
     max-width: 300px;
@@ -899,11 +891,12 @@ body {
     font-size: 16px;
   }
   .accordion--open .accordion-details {
-    height: 100px;
+    height: fit-content;
   }
   .accordion-details__p {
     padding: 10px;
     font-size: 16px;
+    margin: 0;
   }
 }
 @media only screen and (max-width: 300px) {

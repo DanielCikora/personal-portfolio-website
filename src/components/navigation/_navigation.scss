@@ -9,22 +9,20 @@
   animation: fadeIn 2s normal;
   opacity: 1;
 }
-// Browser Scrollbar
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 14px;
 }
 ::-webkit-scrollbar-track {
-  background: $lightgrey;
+  background: $grey;
 }
 ::-webkit-scrollbar-thumb {
-  background: $grey;
-  border-radius: 24px;
+  background: $lightgrey;
+  border-radius: 6px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: rgb(120, 120, 120);
   cursor: pointer;
 }
-/////////////////////
 .navigation--fixed {
   position: fixed;
   animation: slideDown 1.5s normal;
@@ -47,6 +45,7 @@
   display: none;
   background: transparent;
   cursor: pointer;
+  overflow: hidden;
 }
 .hamburger-line {
   display: flex;
@@ -58,18 +57,27 @@
   margin: 6px 0;
   transition: 0.4s;
 }
+.hamburger-line--1 {
+  width: 28px;
+}
 .hamburger-line--2 {
   opacity: 1;
+}
+.hamburger-line--3 {
+  width: 24px;
 }
 // Hamburger Button Opened
 .hamburger--opened {
   .hamburger-line--1 {
     transform: translate(0, 10px) rotate(-45deg);
+    width: initial;
   }
   .hamburger-line--2 {
+    transform: translateX(100%);
     opacity: 0;
   }
   .hamburger-line--3 {
+    width: initial;
     transform: translate(0, -10px) rotate(45deg);
   }
 }

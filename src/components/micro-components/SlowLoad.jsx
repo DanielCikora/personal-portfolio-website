@@ -8,7 +8,7 @@ export default function SlowLoad({ children }) {
     setLoading(true);
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 1600);
     return () => clearTimeout(timer);
   }, [location]);
 
