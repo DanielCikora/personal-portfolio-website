@@ -1,0 +1,27 @@
+.skills {
+  padding: 20px 0 200px;
+  background-color: $ash;
+}
+.skills-content__text {
+  margin-bottom: 200px;
+}
+.skills-title {
+  text-align: center;
+  font-size: 46px;
+  color: $white;
+}
+.skills-content {
+  position: relative;
+}
+.skills-content__icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 20px;
+  position: absolute;
+  width: 100%;
+}
+.skills-icon {
+  font-size: 100px;
+  color: $white;
+}

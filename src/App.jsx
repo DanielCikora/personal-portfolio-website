@@ -6,7 +6,7 @@ import DarkMode from "./components/micro-components/DarkMode";
 import Hero from "./components/hero/Hero";
 import Projects from "./components/navigation/pages/projects/Projects";
 import Services from "./components/services/Services";
-import ProjectsPreview from "./components/projects-preview/ProjectsPreview";
+import Skills from "./components/skills/Skills";
 import Contact from "./components/navigation/pages/contact/Contact";
 import About from "./components/navigation/pages/about/About";
 import Footer from "./components/footer/Footer";
@@ -24,7 +24,7 @@ export default function App() {
                   <DarkMode />
                   <Hero />
                   <Services />
-                  <ProjectsPreview />
+                  <Skills />
                 </>
               }
             />

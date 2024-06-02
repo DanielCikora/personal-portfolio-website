@@ -1,25 +1,9 @@
 import { useState } from "react";
-import axios from "axios";
 export default function ContactForm() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    try {
-      await axios.post("http://localhost:5000/sendEmail", { email, message });
-      alert("Message sent successfully!");
-      setEmail("");
-      setMessage("");
-    } catch (error) {
-      console.error("Error", error);
-      alert("Failed to send messsage. Please try again later.");
-    }
-  };
-
   return (
-    <form className='form' onSubmit={handleSubmit}>
+    <form className='form'>
       <label className='form-label' htmlFor='email-input'>
         Your e-mail address:
       </label>

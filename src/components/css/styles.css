@@ -446,7 +446,6 @@ body {
 ::-webkit-scrollbar-thumb {
   background: #afb9c5;
   border-radius: 6px;
-  border: 2px solid black;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -468,7 +467,7 @@ body {
 .navigation__ul {
   display: flex;
   list-style-type: none;
-  column-gap: 40px;
+  column-gap: 20px;
   align-items: center;
   margin-left: auto;
 }
@@ -477,8 +476,8 @@ body {
   margin-left: auto;
   display: none;
   background: transparent;
-  cursor: pointer;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .hamburger-line {
@@ -496,10 +495,6 @@ body {
   width: 28px;
 }
 
-.hamburger-line--2 {
-  opacity: 1;
-}
-
 .hamburger-line--3 {
   width: 24px;
 }
@@ -509,8 +504,7 @@ body {
   width: initial;
 }
 .hamburger--opened .hamburger-line--2 {
-  transform: translateX(100%);
-  opacity: 0;
+  transform: translateX(110%);
 }
 .hamburger--opened .hamburger-line--3 {
   width: initial;
@@ -565,7 +559,8 @@ body {
     display: none;
   }
   .navigation--opened .navigation__ul {
-    top: 60px;
+    display: flex;
+    top: 44px;
   }
   .hamburger {
     display: block;
@@ -807,7 +802,7 @@ body {
 }
 .services {
   padding: 100px 0 200px;
-  background-color: #344955;
+  background-color: #31363f;
 }
 
 .services-text {
@@ -820,6 +815,7 @@ body {
   max-width: 360px;
   width: 100%;
   height: auto;
+  filter: grayscale(0.8);
 }
 
 .services-text__image {
@@ -847,6 +843,52 @@ body {
   row-gap: 4px;
 }
 
+.accordion {
+  max-width: 400px;
+  width: 100%;
+}
+
+.accordion-btn {
+  background-color: #76abae;
+  border-radius: 4px;
+  border: 2px solid #040d12;
+  margin-bottom: 4px;
+  width: 100%;
+  height: 80px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.accordion-btn:hover {
+  border-color: #eeeeee;
+}
+
+.accordion-details {
+  margin: 0;
+  max-height: 0;
+  display: flex;
+  background-color: #50727b;
+  overflow: hidden;
+  text-align: center;
+  transition: all 0.4s ease-in-out;
+  border-radius: 4px;
+}
+
+.accordion-btn__title {
+  font-weight: 500;
+  font-size: 22px;
+  color: #eeeeee;
+}
+
+.accordion-details__p {
+  font-size: 20px;
+  margin: auto;
+  padding: 20px;
+}
+
+.accordion--open .accordion-details {
+  max-height: 200px;
+}
+
 @media only screen and (max-width: 1024px) {
   .services-text {
     justify-content: space-between;
@@ -855,6 +897,9 @@ body {
 @media only screen and (max-width: 768px) {
   .services-text {
     flex-direction: column;
+  }
+  .services-text__h2--double {
+    display: none;
   }
   .services-text__image {
     text-align: center;
@@ -871,8 +916,7 @@ body {
   .services {
     padding: 40px 0 80px;
   }
-  .services-text__h2,
-  .services-text__h2--double {
+  .services-text__h2 {
     font-size: 36px;
   }
   .services-text__image {
@@ -896,13 +940,9 @@ body {
   .accordion-details__p {
     padding: 10px;
     font-size: 16px;
-    margin: 0;
   }
 }
-@media only screen and (max-width: 300px) {
-  .accordion--open .accordion-details {
-    height: 80px;
-  }
+@media only screen and (max-width: 320px) {
   .accordion-btn__title {
     font-size: 14px;
   }
@@ -911,48 +951,30 @@ body {
     padding: 4px;
   }
 }
-.projects-preview {
-  padding: 500px 0;
+.skills {
+  padding: 20px 0 200px;
+  background-color: #344955;
 }
 
-.projects-wrapper {
+.skills-content__text {
+  margin-bottom: 200px;
+}
+
+.skills-title {
+  text-align: center;
+  font-size: 46px;
+  color: #eeeeee;
+}
+
+.skills-content__icons {
   display: flex;
+  justify-content: center;
+  row-gap: 20px;
 }
 
-.projects-preview-text {
-  width: 100%;
-}
-
-.projects-preview-text__title {
-  margin-bottom: 40px;
-  color: #040d12;
-}
-
-.projects-preview-text__paragraph {
-  margin-bottom: 20px;
-  color: #040d12;
-}
-
-.slider-image {
-  height: auto;
-  width: 100%;
-  max-width: 500px;
-  display: block;
-  margin: 0 auto;
-  border-radius: 4px;
-  object-fit: cover;
-}
-
-.projects-btn__wrapper {
-  display: flex;
-  column-gap: 40px;
-}
-
-.projects-preview-btn {
-  z-index: 99;
-  font-size: 44px;
-  background: none;
-  cursor: pointer;
+.skills-icon {
+  font-size: 100px;
+  color: #eeeeee;
 }
 
 .footer {
@@ -1230,5 +1252,3 @@ body {
     width: 100%;
   }
 }
-
-/*# sourceMappingURL=styles.css.map */

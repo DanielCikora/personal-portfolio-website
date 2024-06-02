@@ -1,7 +1,7 @@
 // Services Text
 .services {
   padding: 100px 0 200px;
-  background-color: $ash;
+  background-color: $charcoal;
 }
 .services-text {
   display: flex;
@@ -13,6 +13,7 @@
   max-width: 360px;
   width: 100%;
   height: auto;
+  filter: grayscale(0.8);
 }
 .services-text__image {
   position: relative;
@@ -40,9 +41,10 @@
   width: 100%;
 }
 .accordion-btn {
-  background-color: $navy;
+  background-color: $teal;
   border-radius: 4px;
-  border: 1px solid $black;
+  border: 2px solid $black;
+  margin-bottom: 4px;
   width: 100%;
   height: 80px;
   transition: all 0.3s ease-in-out;
@@ -59,11 +61,12 @@
   overflow: hidden;
   text-align: center;
   transition: all 0.4s ease-in-out;
-  border-radius: 0 0 4px 4px;
+  border-radius: 4px;
 }
 .accordion-btn__title {
   font-weight: 500;
   font-size: 22px;
+  color: $white;
 }
 .accordion-details__p {
   font-size: 20px;

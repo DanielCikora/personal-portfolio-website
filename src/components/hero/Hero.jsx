@@ -3,18 +3,31 @@ import CVFile from "../../assets/files/Daniel Cikora FE Dev CV ENG.pdf";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { useTypewriter } from "react-simple-typewriter";
 export default function Hero() {
+  const [typeWriterText] = useTypewriter({
+    words: ["DANIEL"],
+    loop: 1,
+    typeSpeed: 300,
+    delaySpeed: 1000,
+  });
+  const videoProperties = {
+    autoPlay: true,
+    muted: true,
+    loop: true,
+    className: "hero-video",
+  };
   return (
     <section className='hero'>
       <div className='hero-video__wrapper'>
-        <video autoPlay muted loop className='hero-video'>
+        <video {...videoProperties}>
           <source src={BGVideo} type='video/mp4' />
           Your browser does not support the video tag.
         </video>
       </div>
       <div className='wrapper wrapper--hero'>
         <div className='hero-text'>
-          <h1 className='title hero-text__h1'>I AM DANIEL</h1>
+          <h1 className='title hero-text__h1'>I AM {typeWriterText}</h1>
           <h2 className='title hero-text__h2'>Frontend Developer</h2>
           <p className='paragraph hero-text__p'>
             Crafting visually appealing and user-friendly websites. Transforming
