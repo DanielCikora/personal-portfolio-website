@@ -1,13 +1,14 @@
 .skills {
-  padding: 20px 0 200px;
-  background-color: $ash;
+  padding: 20px 0;
+  min-height: 100dvh;
+  background-color: $offblack;
 }
 .skills-content__text {
   margin-bottom: 200px;
 }
 .skills-title {
   text-align: center;
-  font-size: 46px;
+  font-size: 40px;
   color: $white;
 }
 .skills-content {
@@ -17,11 +18,23 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  column-gap: 20px;
+  gap: 40px;
   position: absolute;
   width: 100%;
 }
+.skills-content__box {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
 .skills-icon {
+  display: block;
   font-size: 100px;
   color: $white;
+}
+.skills-icon__label {
+  text-align: center;
+  color: $white;
+  font-size: 36px;
+  font-weight: normal;
 }

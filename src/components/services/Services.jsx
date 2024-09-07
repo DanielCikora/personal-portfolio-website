@@ -1,8 +1,68 @@
+import { useEffect, useState, useRef } from "react";
 import ServicesAccordion from "./ServicesAccordion";
-import TerminalImage from "../../assets/images/terminal.png";
-import { useState } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 export default function Services() {
   const [openIndex, setOpenIndex] = useState(null);
+  const servicesRef = useRef(null);
+
+  // GSAP Animations with ScrollTrigger
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Function to animate the heading
+    const animateHeading = () => {
+      gsap.fromTo(
+        ".services-text__h2",
+        { opacity: 0, y: -50 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: ".services-text__h2",
+            start: "top 80%",
+            end: "top 30%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+    };
+
+    // Function to animate accordion items
+    const animateAccordionItems = () => {
+      gsap.fromTo(
+        ".services-text__accordion > *",
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: "power2.out",
+          stagger: 0.3,
+          scrollTrigger: {
+            trigger: ".services-text__accordion",
+            start: "top 80%",
+            end: "top 30%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+    };
+
+    // Call the animation functions
+    animateHeading();
+    animateAccordionItems();
+
+    // Cleanup GSAP scroll triggers when component unmounts
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
+  }, []);
+
+  // Accordion Data
   const accordionItems = [
     {
       key: 1,
@@ -35,22 +95,13 @@ export default function Services() {
         "Enhance website performance and user experience through strategic optimizations, ensuring maximum impact and visibility.",
     },
   ];
+
   return (
-    <section className='services'>
-      <div className='wrapper wrapper--services'>
-        <div className='services-text'>
-          <div className='services-text__image'>
-            <h2 className='services-text__h2 services-text__h2--double'>
-              WHAT I OFFER
-            </h2>
-            <h2 className='services-text__h2'>WHAT I OFFER</h2>
-            <img
-              className='services-image'
-              src={TerminalImage}
-              alt='terminal'
-            />
-          </div>
-          <div className='services-text__accordion'>
+    <section className="services" ref={servicesRef}>
+      <div className="wrapper wrapper--services">
+        <div className="services-text">
+          <h2 className="services-text__h2">WHAT I OFFER</h2>
+          <div className="services-text__accordion">
             {accordionItems.map((accordionItem, index) => (
               <ServicesAccordion
                 key={accordionItem.key}

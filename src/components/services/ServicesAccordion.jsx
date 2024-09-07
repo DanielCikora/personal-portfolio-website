@@ -6,17 +6,20 @@ export default function ServicesAccordion({
   setOpenIndex,
 }) {
   const isOpenAcc = index === openIndex;
-  const handleOpenAcc = () => {
+  const handleToggle = () => {
     setOpenIndex(isOpenAcc ? null : index);
   };
   return (
     <div className={`accordion${isOpenAcc ? " accordion--open" : ""}`}>
-      <button className='accordion-btn' onClick={handleOpenAcc}>
-        <h2 className='title accordion-btn__title'>{title}</h2>
+      <button className="accordion-btn" onClick={handleToggle}>
+        <h2 className="accordion-btn__title">{title}</h2>
       </button>
-      <span className='accordion-details'>
-        <p className='paragraph accordion-details__p'>{text}</p>
-      </span>
+      <div
+        className="accordion-details"
+        style={{ maxHeight: isOpenAcc ? "300px" : "0" }}
+      >
+        <p className="accordion-details__p">{text}</p>
+      </div>
     </div>
   );
 }

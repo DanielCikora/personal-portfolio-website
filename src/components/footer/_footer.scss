@@ -1,19 +1,21 @@
 .footer {
   background-color: $mint;
-  padding: 30px 0 0;
+  padding: 10px 0;
 }
 .wrapper--footer {
   display: flex;
-  column-gap: 40px;
+  justify-content: space-between;
 }
 .footer-logo__year {
   color: $white;
-  font-size: 16px;
+  font-size: 14px;
+  text-align: center;
 }
 .footer-logo {
+  display: block;
   display: flex;
   flex-direction: column;
-  row-gap: 200px;
+  margin: 0;
 }
 .footer-text {
   display: flex;
@@ -21,7 +23,7 @@
 .footer-text__ul {
   list-style: none;
   display: flex;
-  flex-direction: column;
-  row-gap: 20px;
+  align-self: center;
+  column-gap: 20px;
   margin: 0;
 }
