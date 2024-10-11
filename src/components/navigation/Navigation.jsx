@@ -24,10 +24,10 @@ export default function Navigation() {
     };
   }, []);
   const linksArray = [
-    { key: 1, title: "HOME", url: "/" },
-    { key: 2, title: "PROJECTS", url: "/Projects" },
-    { key: 3, title: "ABOUT", url: "/About" },
-    { key: 4, title: "CONTACT", url: "/Contact" },
+    { key: 0, title: "HOME", url: "/" },
+    { key: 1, title: "PROJECTS", url: "/Projects" },
+    { key: 2, title: "ABOUT", url: "/About" },
+    { key: 3, title: "CONTACT", url: "/Contact" },
   ];
   return (
     <header>
@@ -36,15 +36,15 @@ export default function Navigation() {
           isOpen ? " navigation--opened" : ""
         }`}
       >
-        {isScrolled && <ArrowUp />}
-        <div className='wrapper navigation__wrapper'>
+        {isScrolled && !isOpen && <ArrowUp />}
+        <div className="wrapper navigation__wrapper">
           <Logo />
-          <ul className='navigation__ul'>
+          <ul className="navigation__ul">
             {linksArray.map((link) => (
               <li key={link.key}>
                 <Link
                   to={link.url}
-                  className='main-link navigation__link'
+                  className="main-link navigation__link"
                   onClick={handleClose}
                 >
                   {link.title}
@@ -56,9 +56,9 @@ export default function Navigation() {
             className={`hamburger${isOpen ? " hamburger--opened" : ""}`}
             onClick={handleOpen}
           >
-            <span className='hamburger-line hamburger-line--1'></span>
-            <span className='hamburger-line hamburger-line--2'></span>
-            <span className='hamburger-line hamburger-line--3'></span>
+            <span className="hamburger-line hamburger-line--1"></span>
+            <span className="hamburger-line hamburger-line--2"></span>
+            <span className="hamburger-line hamburger-line--3"></span>
           </button>
         </div>
       </nav>

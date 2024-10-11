@@ -3,38 +3,127 @@
   min-height: 100dvh;
   background-color: $offblack;
 }
+
 .skills-content__text {
   margin-bottom: 200px;
+  @include Tablet {
+    margin-bottom: 100px;
+  }
 }
 .skills-title {
   text-align: center;
   font-size: 40px;
   color: $white;
+  @include Laptop {
+    font-size: 35px;
+  }
+  @include Tablet {
+    font-size: 30px;
+  }
+  @include MobileL {
+    font-size: 24px;
+  }
+  @include Mobile {
+    font-size: 20px;
+  }
 }
 .skills-content {
   position: relative;
 }
 .skills-content__icons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 40px;
-  position: absolute;
+  justify-items: center;
   width: 100%;
+  @include LaptopXL {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @include Laptop {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+  }
+  @include Tablet {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  @include MobileL {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 }
 .skills-content__box {
   justify-content: center;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  @include MobileL {
+    gap: 10px;
+  }
+  @include MobileMini {
+    gap: 8px;
+  }
 }
 .skills-icon {
   display: block;
   font-size: 100px;
   color: $white;
+  @include Laptop {
+    font-size: 80px;
+  }
+  @include Tablet {
+    font-size: 60px;
+  }
+  @include MobileL {
+    font-size: 40px;
+  }
+  @include Mobile {
+    font-size: 35px;
+  }
+}
+.skills-icon--svg {
+  width: 150px;
+  height: 100px;
+  filter: invert(100%);
+  @include Laptop {
+    width: 120px;
+    height: 80px;
+  }
+  @include Tablet {
+    width: 100px;
+    height: 70px;
+  }
+  @include MobileL {
+    width: 80px;
+    height: 60px;
+  }
+  @include Mobile {
+    width: 70px;
+    height: 50px;
+  }
+  @include MobileMini {
+    width: 60px;
+    height: 45px;
+  }
 }
 .skills-icon__label {
   text-align: center;
   color: $white;
   font-size: 36px;
   font-weight: normal;
+  @include Laptop {
+    font-size: 28px;
+  }
+  @include Tablet {
+    font-size: 20px;
+  }
+  @include MobileL {
+    font-size: 18px;
+  }
+  @include Mobile {
+    font-size: 16px;
+  }
+  @include MobileMini {
+    font-size: 14px;
+  }
 }

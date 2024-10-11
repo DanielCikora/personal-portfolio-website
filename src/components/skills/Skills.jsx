@@ -1,5 +1,9 @@
 import { useEffect, useRef } from "react";
 import TailwindIcon from "../../assets/images/tailwind.svg";
+import GSAPIcon from "../../assets/images/gsap.svg";
+import TypeScriptIcon from "../../assets/images/typescript.svg";
+import FigmaIcon from "../../assets/images/figma.svg";
+import NextIcon from "../../assets/images/next.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHtml5,
@@ -18,11 +22,15 @@ export default function Skills() {
     { key: 0, iconSrc: faHtml5, name: "HTML5", isSvg: false },
     { key: 1, iconSrc: faCss3, name: "CSS3", isSvg: false },
     { key: 2, iconSrc: faJs, name: "JavaScript", isSvg: false },
-    { key: 3, iconSrc: faReact, name: "React", isSvg: false },
-    { key: 4, iconSrc: faGulp, name: "Gulp", isSvg: false },
-    { key: 5, iconSrc: faBootstrap, name: "Bootstrap", isSvg: false },
-    { key: 6, iconSrc: TailwindIcon, name: "Tailwind", isSvg: true }, // Mark this as an SVG
-    { key: 7, iconSrc: faGit, name: "Git", isSvg: false },
+    { key: 3, iconSrc: TypeScriptIcon, name: "TypeScript", isSvg: true },
+    { key: 4, iconSrc: faReact, name: "React.js", isSvg: false },
+    { key: 5, iconSrc: NextIcon, name: "Next.js", isSvg: true },
+    { key: 6, iconSrc: faGulp, name: "Gulp.js", isSvg: false },
+    { key: 7, iconSrc: faBootstrap, name: "Bootstrap", isSvg: false },
+    { key: 8, iconSrc: TailwindIcon, name: "Tailwind", isSvg: true },
+    { key: 9, iconSrc: GSAPIcon, name: "GSAP", isSvg: true },
+    { key: 10, iconSrc: faGit, name: "Git", isSvg: false },
+    { key: 11, iconSrc: FigmaIcon, name: "Figma", isSvg: true },
   ];
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -61,7 +69,7 @@ export default function Skills() {
                   <img
                     src={skillsIcon.iconSrc}
                     alt={skillsIcon.name}
-                    className="skills-icon"
+                    className="skills-icon skills-icon--svg"
                   />
                 )}
                 <h3 className="skills-icon__label">{skillsIcon.name}</h3>

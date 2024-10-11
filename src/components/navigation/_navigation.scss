@@ -5,7 +5,7 @@
   width: 100%;
   height: 90px;
   display: flex;
-  background-color: $black;
+  background-color: transparent;
   animation: fadeIn 2s normal;
   opacity: 1;
 }
@@ -63,7 +63,6 @@
 .hamburger-line--3 {
   width: 24px;
 }
-// Hamburger Button Opened
 .hamburger--opened {
   .hamburger-line--1 {
     transform: translate(0, 10px) rotate(-45deg);
@@ -87,7 +86,7 @@
     row-gap: 20px;
     position: absolute;
     width: 100%;
-    background-color: $black;
+    background-color: black;
     top: 80px;
     left: 0;
     .navigation__link {
@@ -108,7 +107,6 @@
   .navigation {
     height: 60px;
   }
-
   .navigation--opened {
     .navigation__ul {
       top: 60px;
@@ -133,7 +131,7 @@
   .navigation--opened {
     .navigation__ul {
       display: flex;
-      top: 44px;
+      top: 60px;
     }
   }
   .hamburger {
@@ -142,7 +140,7 @@
 }
 @include MobileL {
   .navigation {
-    height: 60px;
+    height: 56px;
   }
   .navigation--opened .navigation__ul {
     top: 40px;

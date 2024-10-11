@@ -3,10 +3,8 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import BGVideo from "../../assets/videos/blob.mp4";
 import CVFile from "../../assets/files/Daniel Cikora FE Dev CV ENG.pdf";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { useTypewriter } from "react-simple-typewriter";
+import Socials from "../micro-components/Socials";
 export default function Hero() {
   const [typeWriterText] = useTypewriter({
     words: ["DANIEL"],
@@ -63,32 +61,7 @@ export default function Hero() {
           <p className="paragraph hero-text__p">
             Crafting visually appealing and user-friendly websites.
           </p>
-          <div className="hero-text__socials">
-            <a
-              href="mailto:d.cikora98@gmail.com"
-              target="_blank"
-              rel="noreferrer"
-              className="hero-socials__a"
-            >
-              <FontAwesomeIcon icon={faEnvelope} className="hero-socials" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/daniel-cikora-a7344a253"
-              target="_blank"
-              rel="noreferrer"
-              className="hero-socials__a"
-            >
-              <FontAwesomeIcon icon={faLinkedin} className="hero-socials" />
-            </a>
-            <a
-              href="https://github.com/DanielCikora"
-              target="_blank"
-              rel="noreferrer"
-              className="hero-socials__a"
-            >
-              <FontAwesomeIcon icon={faGithub} className="hero-socials" />
-            </a>
-          </div>
+          <Socials className="hero-socials" />
           <a
             href={CVFile}
             className="hero-text__download-btn"
