@@ -1,5 +1,6 @@
 .contact {
-  background-color: $light-cream;
+  background-color: $offblack;
+  min-height: 100dvh;
 }
 .wrapper--contact {
   padding: 80px 0;
@@ -11,6 +12,7 @@
 }
 .contact-text__h2 {
   font-size: 46px;
+  color: $white;
   font-weight: 500;
   letter-spacing: 4px;
   margin-bottom: 40px;
@@ -20,7 +22,7 @@
     content: "";
     height: 2px;
     width: 80px;
-    background-color: $black;
+    background-color: $white;
     bottom: -10px;
     left: 50%;
     transform: translateX(-50%);
@@ -31,55 +33,61 @@
   margin: 0 auto;
   max-width: 800px;
   padding: 0 20px;
-}
-// Form
-.form-container {
-  padding: 0 20px;
-}
-.form {
-  display: block;
-}
-.form-label {
-  display: block;
-  color: $black;
-  margin-bottom: 10px;
-  font-size: 20px;
-}
-#email-input {
-  display: block;
-  padding: 20px 100px 20px 20px;
-  border-radius: 4px;
-  margin-bottom: 20px;
-  font-size: 20px;
-  &::placeholder {
-    color: $lightgrey;
-  }
-}
-#message-area {
-  display: block;
-  border-radius: 4px;
-  resize: none;
-  padding: 20px;
-  margin-bottom: 40px;
-  font-size: 20px;
-  &::placeholder {
-    color: $lightgrey;
-  }
-}
-#send-input {
-  display: block;
-  padding: 20px 30px;
-  border-radius: 4px;
   color: $white;
-  background-color: $lightgrey;
-  transition: all 0.3s ease-in-out;
-  color: $black;
+}
+// Form and Inputs
+.contact-form__content {
+  display: flex;
+  flex-flow: column;
+  gap: 14px;
+  width: 100%;
+  max-width: 50%;
+}
+.contact-form__h2 {
+  color: $white;
+  font-size: 40px;
+  margin: 0 0 14px 0;
+}
+.contact-form {
+  display: block;
+}
+.contact-input {
+  display: block;
+  padding: 16px 12px;
+  width: 100%;
+  border: 1px solid $white;
+  color: $white;
+  border-radius: 4px;
+  background: transparent;
+  font-weight: bold;
+  &::placeholder {
+    color: $white;
+  }
+}
+input,
+textarea {
+  background-color: transparent;
+  color: $white;
+  border: 1px solid #333;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #666;
+  background-color: transparent;
+}
+.contact-submit__btn {
+  max-width: fit-content;
+  display: block;
+  padding: 12px 24px;
+  background: transparent;
+  border: 1px solid $white;
+  color: $white;
+  border-radius: 24px;
+  font-weight: normal;
   font-size: 20px;
   cursor: pointer;
-  &:hover {
-    color: $white;
-    background-color: $navy;
-  }
 }
 // Media Query
 @include Laptop {
@@ -92,55 +100,11 @@
       bottom: -2px;
     }
   }
-  .form-label {
-    font-size: 16px;
-  }
-  #email-input {
-    padding: 16px 16px 16px 16px;
-    &::placeholder {
-      font-size: 16px;
-    }
-  }
-  #message-area {
-    font-size: 16px;
-  }
-  #send-input {
-    font-size: 16px;
-  }
 }
 @include Tablet {
   .contact-text__h2 {
     font-size: 32px;
   }
-  .form-container {
-    justify-content: center;
-    display: flex;
-  }
-  .form-label {
-    margin-bottom: 0;
-  }
-  .form {
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
-    width: 100%;
-    max-width: 500px;
-  }
-  #send-input {
-    max-width: 200px;
-    margin: 0 auto;
-  }
 }
 @include MobileL {
-  .form {
-    max-width: 100%;
-    row-gap: 4px;
-  }
-  #message-area {
-    margin-bottom: 20px;
-  }
-  #send-input {
-    max-width: 100%;
-    width: 100%;
-  }
 }

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 *,
 *::after,
 *::before {
@@ -6,13 +7,24 @@
   border: 0;
 }
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Outfit", serif;
+  font-optical-sizing: auto;
+}
+.wrapper-xl {
+  max-width: 100%;
+  width: 100%;
+  padding: 0 25px;
+  margin: 0 auto;
+  @include Mobile {
+    padding: 0 20px;
+  }
 }
 .wrapper {
   max-width: 1640px;
-  padding: 0 20px;
+  padding: 0 25px;
   margin: 0 auto;
-  @include Tablet {
-    padding: 0 25px;
+  width: 100%;
+  @include Mobile {
+    padding: 0 20px;
   }
 }

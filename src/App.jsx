@@ -1,4 +1,3 @@
-import "../src/components/scss/styles.scss";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import SlowLoad from "./components/micro-components/SlowLoad";
 import Navigation from "./components/navigation/Navigation";
@@ -10,9 +9,11 @@ import Skills from "./components/skills/Skills";
 import Contact from "./components/navigation/pages/contact/Contact";
 import About from "./components/navigation/pages/about/About";
 import Footer from "./components/footer/Footer";
+import { ToastContainer } from "react-toastify";
 export default function App() {
   return (
     <>
+      <ToastContainer />
       <Router>
         <SlowLoad>
           <Navigation />

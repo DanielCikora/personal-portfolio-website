@@ -24,10 +24,10 @@ export default function Navigation() {
     };
   }, []);
   const linksArray = [
-    { key: 1, title: "HOME", url: "/" },
-    { key: 2, title: "PROJECTS", url: "/Projects" },
-    { key: 3, title: "ABOUT", url: "/About" },
-    { key: 4, title: "CONTACT", url: "/Contact" },
+    { key: 0, title: "HOME", url: "/" },
+    { key: 1, title: "PROJECTS", url: "/Projects" },
+    { key: 2, title: "ABOUT", url: "/About" },
+    { key: 3, title: "CONTACT", url: "/Contact" },
   ];
   return (
     <header>
@@ -36,8 +36,8 @@ export default function Navigation() {
           isOpen ? " navigation--opened" : ""
         }`}
       >
-        {isScrolled && <ArrowUp />}
-        <div className='wrapper navigation__wrapper'>
+        {isScrolled && !isOpen && <ArrowUp />}
+        <div className='wrapper-xl navigation__wrapper'>
           <Logo />
           <ul className='navigation__ul'>
             {linksArray.map((link) => (

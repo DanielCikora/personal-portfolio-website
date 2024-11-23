@@ -40,49 +40,54 @@ body {
   animation: fadeIn 2s forwards;
 }
 .hero-text__h1 {
-  font-size: 60px;
-  margin-bottom: 60px;
+  font-size: 80px;
+  margin-bottom: 30px;
   opacity: 1;
 }
 .hero-text__h2 {
-  font-size: 26px;
+  font-size: 36px;
   font-weight: 500;
   line-height: 26px;
   margin-bottom: 30px;
 }
 .hero-text__p {
-  font-size: 22px;
+  font-size: 24px;
   line-height: 24px;
   margin-bottom: 20px;
   max-width: 500px;
 }
 // Socials
-.hero-text__socials {
+.hero-socials {
   display: flex;
   column-gap: 20px;
   margin-bottom: 20px;
 }
-.hero-socials__a {
+.socials__a {
   color: $white;
-  font-size: 36px;
+  font-size: 40px;
   display: block;
-  *:hover {
-    transition: all 0.2s ease-in-out;
-    fill: $grey;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    color: $grey;
   }
+}
+.socials-icon {
+  display: block;
 }
 .hero-text__download-btn {
   display: inline-block;
-  color: $black;
-  padding: 16px 40px;
-  background-color: $white;
-  border-radius: 100px;
+  color: $white;
+  padding: 10px 42px;
+  background-color: transparent;
+  border: 2px solid $white;
+  border-radius: 4px;
   text-decoration: none;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
   font-weight: 600;
+  font-size: 20px;
   &:hover {
-    color: $white;
-    background-color: $grey;
+    color: $black;
+    background-color: $white;
   }
 }
 // Media Query
@@ -102,10 +107,18 @@ body {
     padding: 20px;
   }
   .hero-text__p {
-    margin: 0 auto;
+    margin: 0 auto 20px;
   }
-  .hero-text__socials {
+  .hero-socials {
     justify-content: center;
+  }
+  .hero-text__download-btn {
+    color: $black;
+    background-color: $white;
+    &:hover {
+      color: $white;
+      background-color: $grey;
+    }
   }
 }
 @include Landscape {
@@ -129,7 +142,6 @@ body {
     font-size: 28px;
   }
   .hero-text__p {
-    margin-bottom: 20px;
     line-height: 28px;
   }
   .hero-text__download-btn {
@@ -157,11 +169,12 @@ body {
     padding: 0 30px;
     line-height: 24px;
   }
-  .hero-text__socials {
+  .hero-socials {
     justify-content: center;
   }
   .hero-text__download-btn {
-    font-size: 16px;
+    font-size: 14px;
+    padding: 10px 14px;
   }
 }
 @include Mobile {
