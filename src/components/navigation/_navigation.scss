@@ -25,6 +25,7 @@
 }
 .navigation--fixed {
   position: fixed;
+  background-color: $black;
   animation: slideDown 1.5s normal;
 }
 .navigation__wrapper {
@@ -87,7 +88,7 @@
     row-gap: 20px;
     position: absolute;
     width: 100%;
-    background-color: black;
+    background-color: $black;
     top: 80px;
     left: 0;
     .navigation__link {

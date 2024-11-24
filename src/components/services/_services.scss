@@ -10,15 +10,10 @@
 .accordion {
   width: 100%;
 }
-.wrapper--services {
-  max-width: 100%;
-  width: 100%;
-}
 .services-text__h2 {
   text-align: center;
   color: $white;
   font-size: 46px;
-  margin-bottom: 200px;
 }
 .services-text__accordion {
   display: flex;
@@ -99,7 +94,6 @@
   }
   .services-text__h2 {
     font-size: 26px;
-    margin-bottom: 60px;
   }
   .accordion-btn {
     padding: 2px 4px;

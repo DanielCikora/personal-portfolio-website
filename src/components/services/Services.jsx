@@ -2,16 +2,11 @@ import { useEffect, useState, useRef } from "react";
 import ServicesAccordion from "./ServicesAccordion";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 export default function Services() {
   const [openIndex, setOpenIndex] = useState(null);
   const servicesRef = useRef(null);
-
-  // GSAP Animations with ScrollTrigger
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-
-    // Function to animate the heading
     const animateHeading = () => {
       gsap.fromTo(
         ".services-text__h2",
@@ -30,8 +25,6 @@ export default function Services() {
         }
       );
     };
-
-    // Function to animate accordion items
     const animateAccordionItems = () => {
       gsap.fromTo(
         ".services-text__accordion > *",
@@ -51,18 +44,12 @@ export default function Services() {
         }
       );
     };
-
-    // Call the animation functions
     animateHeading();
     animateAccordionItems();
-
-    // Cleanup GSAP scroll triggers when component unmounts
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
-
-  // Accordion Data
   const accordionItems = [
     {
       key: 1,
@@ -95,13 +82,12 @@ export default function Services() {
         "Enhance website performance and user experience through strategic optimizations, ensuring maximum impact and visibility.",
     },
   ];
-
   return (
-    <section className="services" ref={servicesRef}>
-      <div className="wrapper wrapper--services">
-        <div className="services-text">
-          <h2 className="services-text__h2">WHAT I OFFER</h2>
-          <div className="services-text__accordion">
+    <section className='services' ref={servicesRef}>
+      <div className='wrapper-xl wrapper--services'>
+        <div className='services-text'>
+          <h2 className='services-text__h2'>WHAT I OFFER</h2>
+          <div className='services-text__accordion'>
             {accordionItems.map((accordionItem, index) => (
               <ServicesAccordion
                 key={accordionItem.key}

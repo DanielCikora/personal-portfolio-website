@@ -10,6 +10,7 @@ import Contact from "./components/navigation/pages/contact/Contact";
 import About from "./components/navigation/pages/about/About";
 import Footer from "./components/footer/Footer";
 import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 export default function App() {
   return (
     <>
