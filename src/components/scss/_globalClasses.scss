@@ -1,6 +1,17 @@
 .title {
   color: $white;
 }
+.mainTitle {
+  color: $white;
+  text-align: center;
+  font-size: 40px;
+  @include Tablet {
+    font-size: 30px;
+  }
+  @include MobileL {
+    font-size: 26px;
+  }
+}
 .paragraph {
   color: $white;
 }
@@ -33,16 +44,18 @@
   }
 }
 .cta {
-  color: $white;
-  text-decoration: none;
-  padding: 16px 40px;
-  background-color: $navy;
-  font-size: 16px;
-  border-radius: 50px;
   display: inline-block;
-  text-align: center;
-  transition: all 0.4s ease-in-out;
+  color: $white;
+  padding: 10px 42px;
+  background-color: transparent;
+  border: 2px solid $white;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  font-weight: 600;
+  font-size: 20px;
   &:hover {
-    text-decoration: underline 2px solid $white;
+    color: $black;
+    background-color: $white;
   }
 }

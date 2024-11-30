@@ -86,7 +86,7 @@ export default function Services() {
     <section className='services' ref={servicesRef}>
       <div className='wrapper-xl wrapper--services'>
         <div className='services-text'>
-          <h2 className='services-text__h2'>WHAT I OFFER</h2>
+          <h2 className='mainTitle'>WHAT I OFFER</h2>
           <div className='services-text__accordion'>
             {accordionItems.map((accordionItem, index) => (
               <ServicesAccordion

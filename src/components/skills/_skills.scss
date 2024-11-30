@@ -10,23 +10,6 @@
     margin-bottom: 100px;
   }
 }
-.skills-title {
-  text-align: center;
-  font-size: 40px;
-  color: $white;
-  @include Laptop {
-    font-size: 35px;
-  }
-  @include Tablet {
-    font-size: 30px;
-  }
-  @include MobileL {
-    font-size: 24px;
-  }
-  @include Mobile {
-    font-size: 20px;
-  }
-}
 .skills-content {
   position: relative;
 }

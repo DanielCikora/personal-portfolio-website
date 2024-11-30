@@ -51,28 +51,28 @@ export default function Skills() {
     );
   }, []);
   return (
-    <section className="skills" ref={skillsRef}>
-      <div className="wrapper wrapper--skills">
-        <div className="skills-content">
-          <div className="skills-content__text">
-            <h2 className="skills-title">TECHNOLOGIES USED</h2>
+    <section className='skills' ref={skillsRef}>
+      <div className='wrapper wrapper--skills'>
+        <div className='skills-content'>
+          <div className='skills-content__text'>
+            <h2 className='mainTitle'>TECHNOLOGIES USED</h2>
           </div>
-          <div className="skills-content__icons">
+          <div className='skills-content__icons'>
             {skillsIcons.map((skillsIcon) => (
-              <div className="skills-content__box" key={skillsIcon.key}>
+              <div className='skills-content__box' key={skillsIcon.key}>
                 {!skillsIcon.isSvg ? (
                   <FontAwesomeIcon
-                    className="skills-icon"
+                    className='skills-icon'
                     icon={skillsIcon.iconSrc}
                   />
                 ) : (
                   <img
                     src={skillsIcon.iconSrc}
                     alt={skillsIcon.name}
-                    className="skills-icon skills-icon--svg"
+                    className='skills-icon skills-icon--svg'
                   />
                 )}
-                <h3 className="skills-icon__label">{skillsIcon.name}</h3>
+                <h3 className='skills-icon__label'>{skillsIcon.name}</h3>
               </div>
             ))}
           </div>
