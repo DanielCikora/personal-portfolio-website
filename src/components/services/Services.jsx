@@ -58,7 +58,6 @@ export default function Services() {
       boxIcon: <FontAwesomeIcon icon={faLightbulb} />,
     },
   ];
-
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     const animateHeading = () => {
@@ -86,9 +85,9 @@ export default function Services() {
         {
           opacity: 1,
           y: 0,
-          duration: 0.6,
-          ease: "power2.out",
-          stagger: 0.4,
+          duration: 0.8, // Increased duration for smoother transition
+          ease: "power3.out", // Slightly smoother easing
+          stagger: 0.2, // Reduced stagger time for more fluid animation
           scrollTrigger: {
             trigger: ".services-content__boxes",
             start: "top 80%",
@@ -98,8 +97,10 @@ export default function Services() {
         }
       );
     };
+
     animateHeading();
     animateAccordionItems();
+
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
