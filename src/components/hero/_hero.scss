@@ -35,12 +35,13 @@ body {
 // Hero Text
 .hero-text {
   position: absolute;
-  top: 160px;
+  top: 50%;
+  transform: translateY(-50%);
   max-width: 700px;
   animation: fadeIn 2s forwards;
 }
 .hero-text__h1 {
-  font-size: 80px;
+  font-size: 90px;
   margin-bottom: 30px;
   opacity: 1;
 }
@@ -98,6 +99,8 @@ body {
     padding: 0;
   }
   .hero-text {
+    transform: translateY(0);
+    top: 100px;
     text-align: center;
     margin: 0 auto;
     max-width: 600px;
@@ -157,24 +160,24 @@ body {
     left: 0;
   }
   .hero-text__h1 {
-    font-size: 42px;
+    font-size: 50px;
     margin-bottom: 20px;
   }
   .hero-text__h2 {
-    font-size: 24px;
+    font-size: 26px;
   }
   .hero-text__p {
     max-width: 100%;
-    font-size: 18px;
-    padding: 0 30px;
+    font-size: 20px;
     line-height: 24px;
   }
   .hero-socials {
     justify-content: center;
   }
   .hero-text__download-btn {
-    font-size: 14px;
-    padding: 10px 14px;
+    font-size: 18px;
+    padding: 16px 14px;
+    width: 100%;
   }
 }
 @include Mobile {

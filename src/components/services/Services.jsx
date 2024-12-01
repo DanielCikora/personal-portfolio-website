@@ -1,15 +1,69 @@
 import { useEffect, useState, useRef } from "react";
-import ServicesAccordion from "./ServicesAccordion";
+import ServicesBoxes from "./ServicesBoxes";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faChartLine,
+  faCode,
+  faComment,
+  faLaptopCode,
+  faLightbulb,
+  faShareAlt,
+} from "@fortawesome/free-solid-svg-icons";
 export default function Services() {
   const [openIndex, setOpenIndex] = useState(null);
   const servicesRef = useRef(null);
+  const boxesItems = [
+    {
+      key: 1,
+      boxTitle: "Custom Website Development",
+      boxParagraph:
+        "Tailor-made digital solutions that align with your brand identity and business objectives for a standout online presence.",
+      boxIcon: <FontAwesomeIcon icon={faCode} />,
+    },
+    {
+      key: 2,
+      boxTitle: "Responsive Web Development",
+      boxParagraph:
+        "Ensure optimal user experience on any device with fluid and adaptive design techniques.",
+      boxIcon: <FontAwesomeIcon icon={faLaptopCode} />,
+    },
+    {
+      key: 3,
+      boxTitle: "Social Media Integration",
+      boxParagraph:
+        "Seamlessly integrate social platforms to enhance audience engagement and expand online reach.",
+      boxIcon: <FontAwesomeIcon icon={faShareAlt} />,
+    },
+    {
+      key: 4,
+      boxTitle: "Consultation Services",
+      boxParagraph:
+        "Gain valuable insights and tailored strategies to elevate your online presence and achieve your business goals.",
+      boxIcon: <FontAwesomeIcon icon={faComment} />,
+    },
+    {
+      key: 5,
+      boxTitle: "Website Optimization",
+      boxParagraph:
+        "Enhance website performance and user experience through strategic optimizations, ensuring maximum impact and visibility.",
+      boxIcon: <FontAwesomeIcon icon={faChartLine} />,
+    },
+    {
+      key: 6,
+      boxTitle: "Creative Frontend Solutions",
+      boxParagraph:
+        "Showcase modern animations and interactive features to captivate users and leave a lasting impression.",
+      boxIcon: <FontAwesomeIcon icon={faLightbulb} />,
+    },
+  ];
+
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     const animateHeading = () => {
       gsap.fromTo(
-        ".services-text__h2",
+        ".services-content__title",
         { opacity: 0, y: -50 },
         {
           opacity: 1,
@@ -17,7 +71,7 @@ export default function Services() {
           duration: 1,
           ease: "power2.out",
           scrollTrigger: {
-            trigger: ".services-text__h2",
+            trigger: ".services-content__title",
             start: "top 80%",
             end: "top 30%",
             toggleActions: "play none none reverse",
@@ -27,16 +81,16 @@ export default function Services() {
     };
     const animateAccordionItems = () => {
       gsap.fromTo(
-        ".services-text__accordion > *",
+        ".services-content__boxes > *",
         { opacity: 0, y: 50 },
         {
           opacity: 1,
           y: 0,
-          duration: 1,
+          duration: 0.6,
           ease: "power2.out",
-          stagger: 0.3,
+          stagger: 0.4,
           scrollTrigger: {
-            trigger: ".services-text__accordion",
+            trigger: ".services-content__boxes",
             start: "top 80%",
             end: "top 30%",
             toggleActions: "play none none reverse",
@@ -50,50 +104,19 @@ export default function Services() {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
-  const accordionItems = [
-    {
-      key: 1,
-      accordionTitle: "Custom Website Development",
-      accordionParagraph:
-        "Tailor-made digital solutions that align with your brand identity and business objectives for a standout online presence.",
-    },
-    {
-      key: 2,
-      accordionTitle: "Responsive Web Development",
-      accordionParagraph:
-        "Ensure optimal user experience on any device with fluid and adaptive design techniques.",
-    },
-    {
-      key: 3,
-      accordionTitle: "Social Media Integration",
-      accordionParagraph:
-        "Seamlessly integrate social platforms to enhance audience engagement and expand online reach.",
-    },
-    {
-      key: 4,
-      accordionTitle: "Consultation Services",
-      accordionParagraph:
-        "Gain valuable insights and tailored strategies to elevate your online presence and achieve your business goals.",
-    },
-    {
-      key: 5,
-      accordionTitle: "Website Optimization",
-      accordionParagraph:
-        "Enhance website performance and user experience through strategic optimizations, ensuring maximum impact and visibility.",
-    },
-  ];
   return (
     <section className='services' ref={servicesRef}>
       <div className='wrapper-xl wrapper--services'>
-        <div className='services-text'>
-          <h2 className='mainTitle'>WHAT I OFFER</h2>
-          <div className='services-text__accordion'>
-            {accordionItems.map((accordionItem, index) => (
-              <ServicesAccordion
-                key={accordionItem.key}
+        <div className='services-content'>
+          <h2 className='mainTitle services-content__title'>WHAT I OFFER</h2>
+          <div className='services-content__boxes'>
+            {boxesItems.map((boxItem, index) => (
+              <ServicesBoxes
+                key={boxItem.key}
                 index={index}
-                title={accordionItem.accordionTitle}
-                text={accordionItem.accordionParagraph}
+                title={boxItem.boxTitle}
+                text={boxItem.boxParagraph}
+                icon={boxItem.boxIcon}
                 openIndex={openIndex}
                 setOpenIndex={setOpenIndex}
               />
