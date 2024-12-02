@@ -17,12 +17,12 @@
 .mainTitle {
   color: $white;
   text-align: center;
-  font-size: 40px;
+  font-size: 46px;
   @include Tablet {
-    font-size: 34px;
+    font-size: 36px;
   }
   @include MobileL {
-    font-size: 30px;
+    font-size: 32px;
   }
 }
 .paragraph {

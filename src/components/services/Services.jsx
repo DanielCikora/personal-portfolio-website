@@ -97,10 +97,8 @@ export default function Services() {
         }
       );
     };
-
     animateHeading();
     animateAccordionItems();
-
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };

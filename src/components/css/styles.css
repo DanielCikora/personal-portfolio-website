@@ -329,16 +329,16 @@ template {
 .mainTitle {
   color: #eeeeee;
   text-align: center;
-  font-size: 40px;
+  font-size: 46px;
 }
 @media only screen and (max-width: 768px) {
   .mainTitle {
-    font-size: 34px;
+    font-size: 36px;
   }
 }
 @media only screen and (max-width: 425px) {
   .mainTitle {
-    font-size: 30px;
+    font-size: 32px;
   }
 }
 
@@ -1085,33 +1085,45 @@ body {
 }
 
 .vision {
-  min-height: 100vh;
-  padding: 80px 0;
   background-color: rgba(20, 20, 20, 0.8);
+  color: #eeeeee;
+  padding: 80px 0;
+  min-height: 100dvh;
 }
 .vision__title {
+  margin-bottom: 4rem;
+  margin-top: 0;
+}
+.vision__content {
+  max-width: 1000px;
+  display: flex;
+  flex-flow: column;
+  justify-self: center;
+}
+.vision__content .paragraph {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+  word-wrap: break-word;
+  hyphens: auto;
+  text-justify: inter-word;
+}
+.vision__content ul {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+}
+.vision__content ul li {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #eeeeee;
+}
+.vision__content .vision__closing {
+  margin-top: 2rem;
+  font-style: italic;
   text-align: center;
-  font-size: 2.5rem;
   color: #eeeeee;
-}
-.vision .core-strengths,
-.vision .current-focus {
-  list-style-type: none;
-  margin: 20px 0;
-  padding: 0;
-  color: #eeeeee;
-}
-.vision .core-strengths li,
-.vision .current-focus li {
-  font-size: 1.1rem;
-  margin: 5px 0;
-}
-.vision .core-strengths__title,
-.vision .current-focus__title {
-  color: #eeeeee;
-  font-size: 1.8rem;
-  margin-top: 40px;
-  text-transform: uppercase;
 }
 
 .reach {
@@ -1150,6 +1162,10 @@ body {
   .reach__text-paragraph {
     font-size: 20px;
     line-height: 20px;
+    text-align: justify;
+    word-wrap: break-word;
+    hyphens: auto;
+    text-justify: inter-word;
   }
 }
 @media only screen and (max-width: 425px) {
@@ -1186,11 +1202,14 @@ body {
   display: block;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 150px;
 }
 
 .footer-text {
   display: flex;
   flex-flow: column;
+  width: 100%;
 }
 
 .footer-text__ul {
@@ -1205,9 +1224,22 @@ body {
   gap: 20px;
 }
 
+.footer-logo_socials {
+  width: 100%;
+  max-width: 150px;
+}
+
 @media only screen and (max-width: 768px) {
   .footer {
     padding: 20px 0 4px;
+  }
+  .footer-logo {
+    max-width: unset;
+    width: unset;
+  }
+  .footer-text {
+    max-width: unset;
+    width: unset;
   }
   .footer-content {
     flex-flow: column;
@@ -1222,6 +1254,10 @@ body {
   }
   .footer-logo__year--md {
     display: block;
+  }
+  .footer-logo_socials {
+    max-width: unset;
+    width: unset;
   }
 }
 @media only screen and (max-width: 425px) {
@@ -1249,8 +1285,8 @@ body {
 .projects-image {
   display: block;
   width: 100%;
-  height: 100%;
-  min-height: 100dvh;
+  height: auto;
+  max-height: 100dvh;
   object-fit: cover;
   filter: brightness(0.7);
 }
@@ -1333,7 +1369,7 @@ body {
 }
 
 .contact-text__container {
-  padding-bottom: 300px;
+  margin-bottom: 200px;
   text-align: center;
 }
 
@@ -1343,17 +1379,6 @@ body {
   font-weight: 500;
   letter-spacing: 4px;
   margin-bottom: 40px;
-  position: relative;
-}
-.contact-text__h2::before {
-  position: absolute;
-  content: "";
-  height: 2px;
-  width: 80px;
-  background-color: #eeeeee;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .contact-text__p {
@@ -1413,15 +1438,6 @@ textarea:focus {
 
 .contact-submit__btn {
   max-width: fit-content;
-  display: block;
-  padding: 12px 24px;
-  background: transparent;
-  border: 1px solid #eeeeee;
-  color: #eeeeee;
-  border-radius: 24px;
-  font-weight: normal;
-  font-size: 20px;
-  cursor: pointer;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -1439,6 +1455,47 @@ textarea:focus {
   .contact-text__h2 {
     font-size: 32px;
   }
+}
+.about {
+  padding: 80px 0;
+  background-color: rgba(20, 20, 20, 0.8);
+  min-height: 100dvh;
+  color: #eeeeee;
+}
+.about__title {
+  margin-bottom: 3rem;
+}
+.about__content .paragraph {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: #eeeeee;
+}
+.about__content ul {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+}
+.about__content ul li {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #eeeeee;
+}
+.about__content ul li strong {
+  color: #eeeeee;
+  font-size: 1.2rem;
+}
+.about__content .about__strengths,
+.about__content .about__experience,
+.about__content .about__vision {
+  margin-top: 3rem;
+}
+.about__content .about__strengths .about__subtitle,
+.about__content .about__experience .about__subtitle,
+.about__content .about__vision .about__subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #eeeeee;
 }
 
 /*# sourceMappingURL=styles.css.map */

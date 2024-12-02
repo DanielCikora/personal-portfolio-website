@@ -1,82 +1,73 @@
 .projects {
-  position: relative;
-}
-// Projects video
-.projects-image__wrapper {
-  width: 100%;
-  height: 100%;
   min-height: 100dvh;
-  overflow: hidden;
+  padding: 80px 0;
+  background: $offblack;
 }
-.projects-image {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-height: 100dvh;
-  object-fit: cover;
-  filter: brightness(0.7);
+.projects__title {
+  margin-bottom: 100px;
 }
-// Projects Box
 .wrapper--projects {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
   display: grid;
-  padding-top: 40px;
-  place-items: center;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-auto-rows: auto;
-  gap: 30px;
-}
-.projects-box {
-  background-color: $blue;
-  max-width: 300px;
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  border-radius: 8px;
-  text-align: center;
-  top: 100px;
-  cursor: pointer;
-  position: relative;
-  opacity: 1;
-  animation: fadeIn 2s forwards;
-  *::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 30%;
-    background-color: $green;
-    top: 0;
-    left: 0;
-    border-radius: 8px 8px 0 0;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  width: 100%;
+  max-width: 1200px;
+  @include MobileL {
+    .wrapper--projects {
+      grid-template-columns: 1fr;
+    }
   }
 }
-// Projects Box Image
+.projects-box {
+  background-color: $grey;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease;
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    background-color: darken($grey, 5%);
+  }
+}
 .projects-box__image {
   width: 100%;
-  max-width: 300px;
-  height: auto;
-  margin: 0 auto;
-  z-index: 1;
   border-radius: 8px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
-// Projects Box Text
 .projects-text {
-  padding: 20px 10px 0 10px;
+  color: $white;
 }
 .projects-text__h2 {
-  font-size: 20px;
-  margin-bottom: 20px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: lighten($white, 10%);
 }
 .projects-text__p {
-  font-size: 18px;
-  padding: 0 10px;
-  margin-bottom: 50px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: lighten($white, 20%);
+  margin-bottom: 20px;
 }
 .projects-box__a {
-  font-size: 20px;
-  padding: 20px 20px;
+  font-size: 0.9rem;
+  color: $white;
+  text-decoration: none;
+  padding: 10px 16px;
+  border: 2px solid lighten($white, 10%);
+  border-radius: 6px;
+  background-color: $offblack;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: lighten($offblack, 10%);
+    border-color: $white;
+    color: $white;
+  }
 }

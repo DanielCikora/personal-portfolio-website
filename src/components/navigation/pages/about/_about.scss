@@ -7,6 +7,8 @@
     margin-bottom: 3rem;
   }
   &__content {
+    max-width: 1200px;
+    margin-inline: auto;
     .paragraph {
       font-size: 1.1rem;
       line-height: 1.6;
