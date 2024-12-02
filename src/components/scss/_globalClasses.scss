@@ -1,15 +1,28 @@
 .title {
   color: $white;
 }
+.titleLine {
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 80px;
+    background-color: $white;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
 .mainTitle {
   color: $white;
   text-align: center;
   font-size: 40px;
   @include Tablet {
-    font-size: 30px;
+    font-size: 34px;
   }
   @include MobileL {
-    font-size: 26px;
+    font-size: 30px;
   }
 }
 .paragraph {
@@ -54,6 +67,7 @@
   transition: all 0.3s ease-in-out;
   font-weight: 600;
   font-size: 20px;
+  cursor: pointer;
   &:hover {
     color: $black;
     background-color: $white;

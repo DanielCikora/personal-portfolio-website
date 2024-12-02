@@ -109,7 +109,9 @@ export default function Services() {
     <section className='services' ref={servicesRef}>
       <div className='wrapper-xl wrapper--services'>
         <div className='services-content'>
-          <h2 className='mainTitle services-content__title'>WHAT I OFFER</h2>
+          <h2 className='mainTitle titleLine services-content__title'>
+            WHAT I OFFER
+          </h2>
           <div className='services-content__boxes'>
             {boxesItems.map((boxItem, index) => (
               <ServicesBoxes

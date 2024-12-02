@@ -55,7 +55,7 @@ export default function Skills() {
       <div className='wrapper wrapper--skills'>
         <div className='skills-content'>
           <div className='skills-content__text'>
-            <h2 className='mainTitle'>TECHNOLOGIES USED</h2>
+            <h2 className='mainTitle titleLine'>TECHNOLOGIES</h2>
           </div>
           <div className='skills-content__icons'>
             {skillsIcons.map((skillsIcon) => (

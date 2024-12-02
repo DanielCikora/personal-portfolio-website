@@ -3,7 +3,7 @@ import TrafalgarImage from "../../../../assets/images/trafalgar-pixel-perfect-cu
 export default function ProjectCards() {
   const [selectedCard, setSelectedCard] = useState(null);
   const openGallery = (key) => {
-    setSelectedCard(key === selectedCard ? null : key);
+    setSelectedCard((prevSelected) => (key === prevSelected ? null : key));
   };
   const projectCardsContent = [
     {
@@ -12,7 +12,7 @@ export default function ProjectCards() {
       cardAlt: "project-trafalgar",
       cardTitle: "Trafalgar Medical Company",
       cardDescription:
-        "Website for Trafalgar Medical Company, using React with TypeScript, SCSS and React Router",
+        "Website for Trafalgar Medical Company, using React with TypeScript, SCSS, and React Router.",
       cardGitHubLink:
         "https://github.com/DanielCikora/Trafalgar-ReactJS-App.git",
     },
@@ -22,41 +22,22 @@ export default function ProjectCards() {
       cardAlt: "project-trafalgar",
       cardTitle: "Trafalgar Medical Company",
       cardDescription:
-        "Website for Trafalgar Medical Company, using React with TypeScript, SCSS and React Router",
-      cardGitHubLink:
-        "https://github.com/DanielCikora/Trafalgar-ReactJS-App.git",
-    },
-    {
-      key: 3,
-      cardImgSrc: TrafalgarImage,
-      cardAlt: "project-trafalgar",
-      cardTitle: "Trafalgar Medical Company",
-      cardDescription:
-        "Website for Trafalgar Medical Company, using React with TypeScript, SCSS and React Router",
-      cardGitHubLink:
-        "https://github.com/DanielCikora/Trafalgar-ReactJS-App.git",
-    },
-    {
-      key: 4,
-      cardImgSrc: TrafalgarImage,
-      cardAlt: "project-trafalgar",
-      cardTitle: "Trafalgar Medical Company",
-      cardDescription:
-        "Website for Trafalgar Medical Company, using React with TypeScript, SCSS and React Router",
+        "Website for Trafalgar Medical Company, using React with TypeScript, SCSS, and React Router.",
       cardGitHubLink:
         "https://github.com/DanielCikora/Trafalgar-ReactJS-App.git",
     },
   ];
-
   return (
     <>
       {projectCardsContent.map((projectCard) => (
         <div
-          className={`projects-box${
-            selectedCard === projectCard.key ? " projects-box--opened" : ""
-          }`}
           key={projectCard.key}
+          className={`projects-box ${
+            selectedCard === projectCard.key ? "projects-box--opened" : ""
+          }`}
           onClick={() => openGallery(projectCard.key)}
+          role='button'
+          aria-label={`Open project ${projectCard.cardTitle}`}
         >
           <img
             className='projects-box__image'
@@ -75,7 +56,7 @@ export default function ProjectCards() {
             target='_blank'
             rel='noreferrer'
           >
-            View Code
+            View Project
           </a>
         </div>
       ))}

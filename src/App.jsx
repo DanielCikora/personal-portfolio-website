@@ -6,6 +6,7 @@ import Hero from "./components/hero/Hero";
 import Projects from "./components/navigation/pages/projects/Projects";
 import Services from "./components/services/Services";
 import Skills from "./components/skills/Skills";
+import Vision from "./components/vision/Vision";
 import Reach from "./components/reach/Reach";
 import Contact from "./components/navigation/pages/contact/Contact";
 import About from "./components/navigation/pages/about/About";
@@ -28,6 +29,7 @@ export default function App() {
                   <Hero />
                   <Services />
                   <Skills />
+                  <Vision />
                   <Reach />
                 </>
               }

@@ -21,10 +21,13 @@
   display: block;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 150px;
 }
 .footer-text {
   display: flex;
   flex-flow: column;
+  width: 100%;
 }
 .footer-text__ul {
   list-style: none;
@@ -36,9 +39,21 @@
   display: flex;
   gap: 20px;
 }
+.footer-logo_socials {
+  width: 100%;
+  max-width: 150px;
+}
 @include Tablet {
   .footer {
     padding: 20px 0 4px;
+  }
+  .footer-logo {
+    max-width: unset;
+    width: unset;
+  }
+  .footer-text {
+    max-width: unset;
+    width: unset;
   }
   .footer-content {
     flex-flow: column;
@@ -53,6 +68,10 @@
   }
   .footer-logo__year--md {
     display: block;
+  }
+  .footer-logo_socials {
+    max-width: unset;
+    width: unset;
   }
 }
 @include MobileL {

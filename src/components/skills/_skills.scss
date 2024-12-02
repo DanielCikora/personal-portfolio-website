@@ -54,15 +54,6 @@
   @include Laptop {
     font-size: 80px;
   }
-  @include Tablet {
-    font-size: 60px;
-  }
-  @include MobileL {
-    font-size: 40px;
-  }
-  @include Mobile {
-    font-size: 35px;
-  }
 }
 .skills-icon--svg {
   width: 150px;
@@ -75,18 +66,6 @@
   @include Tablet {
     width: 100px;
     height: 70px;
-  }
-  @include MobileL {
-    width: 80px;
-    height: 60px;
-  }
-  @include Mobile {
-    width: 70px;
-    height: 50px;
-  }
-  @include MobileMini {
-    width: 60px;
-    height: 45px;
   }
 }
 .skills-icon__label {
