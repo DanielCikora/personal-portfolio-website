@@ -2,7 +2,7 @@ import { useState } from "react";
 import emailjs from "emailjs-com";
 import { toast } from "react-toastify";
 const ContactForm = () => {
-  const emailRegex = process.env.REACT_APP_EMAIL_REGEX;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const [formData, setFormData] = useState({
     from_name: "",
     from_email: "",

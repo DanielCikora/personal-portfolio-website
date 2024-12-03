@@ -16,7 +16,10 @@ import "react-toastify/dist/ReactToastify.css";
 export default function App() {
   return (
     <>
-      <ToastContainer />
+      <ToastContainer
+        position='top-center'
+        style={{ marginTop: "80px", zIndex: 10000 }}
+      />
       <Router>
         <SlowLoad>
           <Navigation />
