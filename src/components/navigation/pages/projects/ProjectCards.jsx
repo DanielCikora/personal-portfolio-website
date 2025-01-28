@@ -1,5 +1,6 @@
 import { useState } from "react";
-import TrafalgarImage from "../../../../assets/images/trafalgar-pixel-perfect-cut.png";
+import WorkSphereImage from "../../../../assets/images/work-sphere-image.png";
+import ZummpathImage from "../../../../assets/images/zummpath-image.png";
 export default function ProjectCards() {
   const [selectedCard, setSelectedCard] = useState(null);
   const openGallery = (key) => {
@@ -8,63 +9,23 @@ export default function ProjectCards() {
   const projectCardsContent = [
     {
       key: 1,
-      cardImgSrc: TrafalgarImage,
-      cardAlt: "project-trafalgar",
-      cardTitle: "Trafalgar Medical Company",
+      cardImgSrc: ZummpathImage,
+      cardAlt: "project-zummpath-bioinformatics",
+      cardTitle: "Zummpath Bioinformatics",
       cardDescription:
-        "Website for Trafalgar Medical Company, using React with TypeScript, SCSS, and React Router.",
-      cardGitHubLink:
-        "https://github.com/DanielCikora/Trafalgar-ReactJS-App.git",
+        "Zummpath Bioinformatics Static Web Page - React.js, GSAP, Three.js, Tailwind.css",
+      cardLink: "https://zummpathbioinformatics.zummitlabs.com",
+      cardGitHubLink: "https://zummpathbioinformatics.zummitlabs.com",
     },
     {
       key: 2,
-      cardImgSrc: TrafalgarImage,
-      cardAlt: "project-trafalgar",
-      cardTitle: "Trafalgar Medical Company",
+      cardImgSrc: WorkSphereImage,
+      cardAlt: "project-work-sphere",
+      cardTitle: "Work Sphere",
       cardDescription:
-        "Website for Trafalgar Medical Company, using React with TypeScript, SCSS, and React Router.",
-      cardGitHubLink:
-        "https://github.com/DanielCikora/Trafalgar-ReactJS-App.git",
-    },
-    {
-      key: 3,
-      cardImgSrc: TrafalgarImage,
-      cardAlt: "project-trafalgar",
-      cardTitle: "Trafalgar Medical Company",
-      cardDescription:
-        "Website for Trafalgar Medical Company, using React with TypeScript, SCSS, and React Router.",
-      cardGitHubLink:
-        "https://github.com/DanielCikora/Trafalgar-ReactJS-App.git",
-    },
-    {
-      key: 4,
-      cardImgSrc: TrafalgarImage,
-      cardAlt: "project-trafalgar",
-      cardTitle: "Trafalgar Medical Company",
-      cardDescription:
-        "Website for Trafalgar Medical Company, using React with TypeScript, SCSS, and React Router.",
-      cardGitHubLink:
-        "https://github.com/DanielCikora/Trafalgar-ReactJS-App.git",
-    },
-    {
-      key: 5,
-      cardImgSrc: TrafalgarImage,
-      cardAlt: "project-trafalgar",
-      cardTitle: "Trafalgar Medical Company",
-      cardDescription:
-        "Website for Trafalgar Medical Company, using React with TypeScript, SCSS, and React Router.",
-      cardGitHubLink:
-        "https://github.com/DanielCikora/Trafalgar-ReactJS-App.git",
-    },
-    {
-      key: 6,
-      cardImgSrc: TrafalgarImage,
-      cardAlt: "project-trafalgar",
-      cardTitle: "Trafalgar Medical Company",
-      cardDescription:
-        "Website for Trafalgar Medical Company, using React with TypeScript, SCSS, and React Router.",
-      cardGitHubLink:
-        "https://github.com/DanielCikora/Trafalgar-ReactJS-App.git",
+        "Work Sphere Web App - Next.js, TypeScript, Redux.js, Three.js, Tailwind.css",
+      cardLink: "https://dc-worksphere.netlify.app",
+      cardGitHubLink: "https://dc-worksphere.netlify.app",
     },
   ];
   return (

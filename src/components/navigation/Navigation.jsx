@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../micro-components/Logo";
-import ArrowUp from "../arrow-up/ArrowUp";
 export default function Navigation() {
   const [isFixed, setIsFixed] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const handleOpen = () => {
     setIsOpen(!isOpen);
@@ -15,7 +13,6 @@ export default function Navigation() {
   useEffect(() => {
     const handleScroll = () => {
       const offset = window.scrollY;
-      setIsScrolled(offset > 90);
       setIsFixed(offset > 90);
     };
     window.addEventListener("scroll", handleScroll);
@@ -36,15 +33,14 @@ export default function Navigation() {
           isOpen ? " navigation--opened" : ""
         }`}
       >
-        {isScrolled && !isOpen && <ArrowUp />}
         <div className='wrapper-xl navigation__wrapper'>
           <Logo />
-          <ul className="navigation__ul">
+          <ul className='navigation__ul'>
             {linksArray.map((link) => (
               <li key={link.key}>
                 <Link
                   to={link.url}
-                  className="main-link navigation__link"
+                  className='main-link navigation__link'
                   onClick={handleClose}
                 >
                   {link.title}
@@ -56,9 +52,9 @@ export default function Navigation() {
             className={`hamburger${isOpen ? " hamburger--opened" : ""}`}
             onClick={handleOpen}
           >
-            <span className="hamburger-line hamburger-line--1"></span>
-            <span className="hamburger-line hamburger-line--2"></span>
-            <span className="hamburger-line hamburger-line--3"></span>
+            <span className='hamburger-line hamburger-line--1'></span>
+            <span className='hamburger-line hamburger-line--2'></span>
+            <span className='hamburger-line hamburger-line--3'></span>
           </button>
         </div>
       </nav>
