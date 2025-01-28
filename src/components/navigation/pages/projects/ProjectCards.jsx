@@ -1,6 +1,9 @@
 import { useState } from "react";
 import WorkSphereImage from "../../../../assets/images/work-sphere-image.png";
 import ZummpathImage from "../../../../assets/images/zummpath-image.png";
+import PortfolioImage from "../../../../assets/images/portfolio.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faWebAwesome } from "@fortawesome/free-brands-svg-icons";
 export default function ProjectCards() {
   const [selectedCard, setSelectedCard] = useState(null);
   const openGallery = (key) => {
@@ -14,8 +17,9 @@ export default function ProjectCards() {
       cardTitle: "Zummpath Bioinformatics",
       cardDescription:
         "Zummpath Bioinformatics Static Web Page - React.js, GSAP, Three.js, Tailwind.css",
+      cardGitHubLink:
+        "https://github.com/DanielCikora/zummpath-bio-informatics",
       cardLink: "https://zummpathbioinformatics.zummitlabs.com",
-      cardGitHubLink: "https://zummpathbioinformatics.zummitlabs.com",
     },
     {
       key: 2,
@@ -24,8 +28,19 @@ export default function ProjectCards() {
       cardTitle: "Work Sphere",
       cardDescription:
         "Work Sphere Web App - Next.js, TypeScript, Redux.js, Three.js, Tailwind.css",
+      cardGitHubLink: "https://github.com/DanielCikora/work-sphere",
       cardLink: "https://dc-worksphere.netlify.app",
-      cardGitHubLink: "https://dc-worksphere.netlify.app",
+    },
+    {
+      key: 3,
+      cardImgSrc: PortfolioImage,
+      cardAlt: "project-personal-portfolio",
+      cardTitle: "Personal Portfolio",
+      cardDescription:
+        "Personal Portfolio Static Web Page - React.js, React Router, SASS",
+      cardGitHubLink:
+        "https://github.com/DanielCikora/personal-portfolio-website",
+      cardLink: "https://danielcikora.netlify.app",
     },
   ];
   return (
@@ -52,12 +67,21 @@ export default function ProjectCards() {
             </p>
           </div>
           <a
-            className='cta'
+            className='cta cta--link__github'
             href={projectCard.cardGitHubLink}
             target='_blank'
             rel='noreferrer'
           >
-            View Project
+            GitHub <FontAwesomeIcon className='github-icon' icon={faGithub} />
+          </a>
+          <a
+            className='cta cta--link__website'
+            href={projectCard.cardLink}
+            target='_blank'
+            rel='noreferrer'
+          >
+            Live Site{" "}
+            <FontAwesomeIcon className='awesome-icon' icon={faWebAwesome} />
           </a>
         </div>
       ))}

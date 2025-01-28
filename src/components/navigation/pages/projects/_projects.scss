@@ -71,3 +71,28 @@
     color: $white;
   }
 }
+.cta--link__github {
+  font-size: 16px;
+  margin-bottom: 40px;
+  width: fit-content;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  padding: 6px 8px;
+  gap: 10px;
+  .github-icon {
+    font-size: 24px;
+  }
+}
+.cta--link__website {
+  font-size: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 6px 2px;
+  .awesome-icon {
+    font-size: 26px;
+  }
+}
