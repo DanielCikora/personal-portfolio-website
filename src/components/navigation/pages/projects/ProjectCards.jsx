@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ExoticRestaurant from "../../../../assets/images/exotic-restaurant.png";
 import WorkSphereImage from "../../../../assets/images/work-sphere-image.png";
 import ZummpathImage from "../../../../assets/images/zummpath-image.png";
 import PortfolioImage from "../../../../assets/images/portfolio.png";
@@ -11,12 +12,22 @@ export default function ProjectCards() {
   };
   const projectCardsContent = [
     {
+      key: 0,
+      cardImgSrc: ExoticRestaurant,
+      cardAlt: "project-personal-portfolio",
+      cardTitle: "Exotic Indian Eats",
+      cardDescription:
+        "Fullstack - Exotic Indian Restaurant - Next.js, Tailwind.css, Express.js, MongoDB",
+      cardGitHubLink: "https://github.com/DanielCikora/exotic-restaurant",
+      cardLink: "https://exotic-restaurant-tzp1.vercel.app/",
+    },
+    {
       key: 1,
       cardImgSrc: ZummpathImage,
       cardAlt: "project-zummpath-bioinformatics",
       cardTitle: "Zummpath Bioinformatics",
       cardDescription:
-        "Zummpath Bioinformatics Static Web Page - React.js, GSAP, Three.js, Tailwind.css",
+        "Frontend - Zummpath Bioinformatics Static Web Page - React.js, GSAP, Three.js, Tailwind.css",
       cardGitHubLink:
         "https://github.com/DanielCikora/zummpath-bio-informatics",
       cardLink: "https://zummpathbioinformatics.zummitlabs.com",
@@ -27,7 +38,7 @@ export default function ProjectCards() {
       cardAlt: "project-work-sphere",
       cardTitle: "Work Sphere",
       cardDescription:
-        "Work Sphere Web App - Next.js, TypeScript, Redux.js, Three.js, Tailwind.css",
+        "Frontend - Work Sphere Job Search Web App - Next.js, TypeScript, Redux.js, Three.js, Tailwind.css",
       cardGitHubLink: "https://github.com/DanielCikora/work-sphere",
       cardLink: "https://dc-worksphere.netlify.app",
     },
@@ -37,7 +48,7 @@ export default function ProjectCards() {
       cardAlt: "project-personal-portfolio",
       cardTitle: "Personal Portfolio",
       cardDescription:
-        "Personal Portfolio Static Web Page - React.js, React Router, SASS",
+        "Frontend - Personal Portfolio Static Web Page - React.js, React Router, SASS",
       cardGitHubLink:
         "https://github.com/DanielCikora/personal-portfolio-website",
       cardLink: "https://danielcikora.netlify.app",
