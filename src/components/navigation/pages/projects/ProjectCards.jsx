@@ -41,7 +41,7 @@ export default function ProjectCards() {
         "Frontend - Zummpath Bioinformatics Static Web Page - React.js, GSAP, Three.js, Tailwind.css",
       cardGitHubLink:
         "https://github.com/DanielCikora/zummpath-bio-informatics",
-      cardLink: "https://zummpathbioinformatics.zummitlabs.com",
+      cardLink: "https://zummpath-bio-informatics.vercel.app/",
     },
     {
       key: 3,
