@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import BGVideo from "../../assets/videos/blob.mp4";
-import CVFile from "../../assets/files/Daniel Cikora FE Dev CV ENG.pdf";
+import CVFile from "../../assets/files/Daniel Cikora FE Dev CV.pdf";
 import { useTypewriter } from "react-simple-typewriter";
 import Socials from "../micro-components/Socials";
 export default function Hero() {
