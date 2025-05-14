@@ -3,9 +3,20 @@ import WorkSphereImage from "../../assets/images/work-sphere-image.png";
 import ZummpathImage from "../../assets/images/zummpath-image.png";
 import PortfolioImage from "../../assets/images/portfolio.png";
 import FinanceTrackerImage from "../../assets/images/finance-tracker-image.png";
+import NextPlayImage from "../../assets/images/nextplay-image.png";
 export const projectCardsContent = [
   {
     key: 0,
+    cardImgSrc: NextPlayImage,
+    cardAlt: "project-next-play",
+    cardTitle: "Next Play",
+    cardDescription:
+      "Frontend - Free Games Platform - Next.js, Tailwind.css, TypeScript, Zustand",
+    cardGitHubLink: "https://github.com/DanielCikora/next-play",
+    cardLink: "https://next-play-amber.vercel.app/",
+  },
+  {
+    key: 1,
     cardImgSrc: FinanceTrackerImage,
     cardAlt: "project-finance-tracker",
     cardTitle: "Finance Tracker",
@@ -15,7 +26,7 @@ export const projectCardsContent = [
     cardLink: "https://finance-tracker-seven-delta.vercel.app/dashboard",
   },
   {
-    key: 1,
+    key: 2,
     cardImgSrc: ExoticRestaurant,
     cardAlt: "project-exotic-restaurant",
     cardTitle: "Exotic Indian Eats",
@@ -25,7 +36,7 @@ export const projectCardsContent = [
     cardLink: "https://exotic-restaurant-tzp1.vercel.app/",
   },
   {
-    key: 2,
+    key: 3,
     cardImgSrc: ZummpathImage,
     cardAlt: "project-zummpath-bioinformatics",
     cardTitle: "Zummpath Bioinformatics",
@@ -35,17 +46,17 @@ export const projectCardsContent = [
     cardLink: "https://zummpath-bio-informatics.vercel.app/",
   },
   {
-    key: 3,
+    key: 4,
     cardImgSrc: WorkSphereImage,
     cardAlt: "project-work-sphere",
     cardTitle: "Work Sphere",
     cardDescription:
-      "Frontend - Work Sphere Job Search Web App - Next.js, TypeScript, Redux.js, Three.js, Tailwind.css",
+      "Frontend - Work Sphere Job Search Web App - Next.js, TypeScript, Redux.js, Tailwind.css",
     cardGitHubLink: "https://github.com/DanielCikora/work-sphere",
     cardLink: "https://dc-worksphere.netlify.app",
   },
   {
-    key: 4,
+    key: 5,
     cardImgSrc: PortfolioImage,
     cardAlt: "project-personal-portfolio",
     cardTitle: "Personal Portfolio",
